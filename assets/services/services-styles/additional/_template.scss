@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: #122947;
+    text-decoration: none;
+}
+
+
+@mixin text-font($size, $weight, $height) {
+    font-size: $size;
+    font-family: "M PLUS 1p", "arial", sans-serif;
+    font-style: normal;
+    font-weight: $weight;
+    line-height: $height;
+}
+
+@mixin heading-font ($size, $weight, $height) {
+    font-size: $size;
+    font-family: "Raleway", "arial", sans-serif;
+    font-style: normal;
+    font-weight: $weight;
+    line-height: $height;
+}
+
+@mixin background () {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+@mixin xs {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
