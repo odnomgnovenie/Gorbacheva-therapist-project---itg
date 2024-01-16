@@ -9,7 +9,7 @@ a {
     text-decoration: none;
 }
 
-
+//миксин для основного тектса, где 3 переменных указываем в скобках
 @mixin text-font($size, $weight, $height) {
     font-size: $size;
     font-family: "M PLUS 1p", "arial", sans-serif;
@@ -18,6 +18,7 @@ a {
     line-height: $height;
 }
 
+//миксин для текста заголовков, где 3 переменных указываем в скобках
 @mixin heading-font ($size, $weight, $height) {
     font-size: $size;
     font-family: "Raleway", "arial", sans-serif;
@@ -26,13 +27,68 @@ a {
     line-height: $height;
 }
 
+//миксин для кнопки овальной формы бежевого цвета 
+@mixin btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    background: #FAF8EC;
+    box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(17.5px);
+}
+
+//миксин для обводки овальной формы зеленого цвета в ресурсах и стилях
+@mixin border {
+    border-radius: 23px;
+    border: 3px solid #8C9775;
+}
+
+//миксин свойств фона
 @mixin background () {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
 
+//миксин позиционирования space-between во flex
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+//миксин позиционирования space-around во flex
+@mixin flex-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+//миксин позиционирования center во flex
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//миксин абсолютного позиционирования со значением верх-право
+@mixin absolute-right ($top , $right ) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    transform: translate(0, -50%);
+}
+
+//миксин абсолютного позиционирования со значением верх-лево
+@mixin absolut-top-center ($top, $left) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    transform: translate(-50%, 0);
+}
+
+//миксин адаптива под смартфон
 @mixin xs {
     @media (max-width: 767px) {
         @content;
