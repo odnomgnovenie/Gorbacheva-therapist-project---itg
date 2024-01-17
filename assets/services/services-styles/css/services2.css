@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #122947;
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.services-page {
+  background-color: #FAF8EC;
+}
+.services-page__container {
+  max-width: 1920px;
+  margin-left: 90px;
+  margin-right: 90px;
+}
+.services-page__title {
+  text-wrap: balance;
+  color: #8C9775;
+  font-size: 50px;
+  font-family: "Raleway", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 0;
+  margin-left: 100px;
+}
+
+.page-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+.image-wrapper__img {
+  max-width: 400px;
+  filter: drop-shadow(0 0 5px #8C9775);
+  border-radius: 1em;
+}
+
+.service-description {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+}
+.service-description__list {
+  list-style: none;
+  font-size: 25px;
+  font-family: "M PLUS 1p", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #8C9775;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.service-description__item {
+  position: relative;
+}
+.service-description__item:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -2em;
+  top: 8px;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-image: url("../../services-images/star.svg");
+  background-size: contain;
+}
+
+.duration {
+  margin-top: 54px;
+  max-width: 1920px;
+  margin-left: 90px;
+  margin-right: 90px;
+  display: flex;
+  justify-content: space-around;
+}
+.duration__container {
+  max-width: 500px;
+  border: 1px solid #8C9775;
+  background-color: #8C9775;
+  border-radius: 1em;
+  padding: 20px;
+}
+.duration__container-title {
+  font-size: 25px;
+  font-family: "Raleway", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #FAF8EC;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.duration__container-text {
+  font-size: 16px;
+  font-family: "M PLUS 1p", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #FAF8EC;
+  margin-top: 20px;
+}
+.duration .price-connect {
+  max-width: 500px;
+  border: 1px solid #8C9775;
+  background-color: #8C9775;
+  border-radius: 1em;
+  padding: 20px;
+}
+.duration .price-connect__title {
+  font-size: 25px;
+  font-family: "Raleway", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #FAF8EC;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.duration .price-connect__title-numbers {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.duration .price-connect__subtitle {
+  font-size: 15px;
+  font-family: "Raleway", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #FAF8EC;
+  padding: 20px 0 20px;
+  text-align: center;
+}
+.duration .price-connect__tlg {
+  font-size: 15px;
+  font-family: "Raleway", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #FAF8EC;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.duration .price-connect__text {
+  font-size: 12px;
+  font-family: "M PLUS 1p", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #FAF8EC;
+  font-style: italic;
+  text-align: center;
+}
+.duration .price-connect__link {
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "M PLUS 1p", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #FAF8EC;
+  background-color: #8C9775;
+  display: grid;
+  place-items: center;
+  padding: 1em 4em;
+  border: 2px solid #FAF8EC;
+  border-radius: 40px;
+  max-width: max-content;
+  margin: 0 auto;
+  box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+/*# sourceMappingURL=services2.css.map */
