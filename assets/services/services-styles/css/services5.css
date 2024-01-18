@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #122947;
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FAF8EC;
+}
+
+.services-page {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+.services-page__title {
+  text-wrap: balance;
+  color: #8C9775;
+  font-size: 50px;
+  font-family: "Raleway", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 0;
+}
+
+.page-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+.image-wrapper__img {
+  max-width: 400px;
+  filter: drop-shadow(0 0 5px #8C9775);
+  border-radius: 1em;
+}
+
+.service-description {
+  width: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 20px;
+}
+.service-description:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../services-images/golden-flowers.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right bottom;
+}
+.service-description__title {
+  color: #8C9775;
+  font-size: 25px;
+  font-family: "Raleway", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.service-description__list {
+  list-style: none;
+  font-size: 25px;
+  font-family: "M PLUS 1p", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #8C9775;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.service-description__item {
+  position: relative;
+  text-align: justify;
+}
+.service-description__item:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -2em;
+  top: 8px;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-image: url("../../services-images/star.svg");
+  background-size: contain;
+}
+
+.meditations {
+  margin-top: 54px;
+  display: flex;
+  justify-content: space-around;
+}
+.meditations__container {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 2px solid #8C9775;
+  border-radius: 1em;
+  padding: 20px;
+}
+.meditations__title {
+  color: #8C9775;
+  font-size: 25px;
+  font-family: "Raleway", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+.meditations__text {
+  text-align: justify;
+  font-size: 16px;
+  font-family: "M PLUS 1p", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #8C9775;
+}
+
+.results {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.results__title {
+  color: #8C9775;
+  font-size: 25px;
+  font-family: "Raleway", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.results__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 16px;
+  font-family: "M PLUS 1p", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #8C9775;
+  padding-left: 40px;
+}
+.results__item {
+  position: relative;
+}
+.results__item:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -2em;
+  top: 4px;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-image: url("../../services-images/star.svg");
+  background-size: contain;
+}
+
+.price__title {
+  color: #8C9775;
+  font-size: 25px;
+  font-family: "Raleway", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+.price__title-numbers {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.price-connect {
+  margin-top: auto;
+}
+.price-connect__link {
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "M PLUS 1p", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #FAF8EC;
+  background-color: #8C9775;
+  display: grid;
+  place-items: center;
+  padding: 1em 4em;
+  border: 2px solid #8C9775;
+  border-radius: 40px;
+  max-width: max-content;
+  margin: 0 auto;
+  box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.25);
+}
+.price-connect__subtitle {
+  font-size: 15px;
+  font-family: "Raleway", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #8C9775;
+  padding: 20px 0 20px;
+  text-align: center;
+}
+.price-connect__tlg {
+  font-size: 15px;
+  font-family: "Raleway", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #8C9775;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.price-connect__text {
+  font-size: 12px;
+  font-family: "M PLUS 1p", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #8C9775;
+  font-style: italic;
+  text-align: center;
+}
+
+/*# sourceMappingURL=services5.css.map */
