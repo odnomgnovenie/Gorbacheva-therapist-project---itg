@@ -17,13 +17,14 @@ a {
   box-sizing: border-box;
 }
 
-.services-page {
+body {
   background-color: #FAF8EC;
 }
-.services-page__container {
+
+.services-page {
   max-width: 1920px;
-  margin-left: 90px;
-  margin-right: 90px;
+  margin: 0 auto;
+  padding: 0 50px;
 }
 .services-page__title {
   text-wrap: balance;
@@ -34,7 +35,6 @@ a {
   font-weight: 400;
   line-height: normal;
   margin-top: 0;
-  margin-left: 100px;
 }
 
 .page-wrapper {
@@ -84,9 +84,6 @@ a {
 
 .duration {
   margin-top: 54px;
-  max-width: 1920px;
-  margin-left: 90px;
-  margin-right: 90px;
   display: flex;
   justify-content: space-around;
 }

@@ -8,21 +8,20 @@
     box-sizing: border-box;
 }
 
-.services-page {
+body {
     background-color: #FAF8EC;
+}
 
-    &__container {
-        max-width: 1920px;
-        margin-left: 90px;
-        margin-right: 90px;
-    }
+.services-page {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 50px;
 
     &__title {
         text-wrap: balance;
         color: $font-green;
         @include heading-font (50px, 400, normal);
         margin-top: 0;
-        margin-left: 100px;
     }
 }
 
@@ -74,9 +73,6 @@
 
 .duration {
     margin-top: 54px;
-    max-width: 1920px;
-    margin-left: 90px;
-    margin-right: 90px;
     display: flex;
     justify-content: space-around;
 
