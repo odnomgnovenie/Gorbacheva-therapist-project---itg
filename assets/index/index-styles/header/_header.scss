@@ -1,4 +1,6 @@
 @import "../additional/template";
+@import "../additional/fonts";
+@import "../additional/vars";
 
 .hamburger_xs {
   display: none;
@@ -7,6 +9,7 @@
 @include xs {
   .hamburger_xs {
     display: block;
+    max-width: 200px;
     position: relative;
     top: 10px;
     left: 20px;
@@ -35,7 +38,7 @@
       height: 4px;
       margin-bottom: 5px;
       position: relative;
-      background: #faf8ec;
+      background: $font-beige;
       border-radius: 3px;
       z-index: 1;
       transform-origin: 4px 0px;
@@ -51,7 +54,7 @@
     input:checked ~ span {
       opacity: 1;
       transform: rotate(45deg) translate(-2px, -1px);
-      background: #faf8ec;
+      background: $font-beige;
     }
     input:checked ~ span:nth-last-child(3) {
       opacity: 0;
@@ -62,27 +65,26 @@
     }
     .menu {
       position: absolute;
-      width: 300px;
+      width: 200px;
       margin: -100px 0 0 -50px;
       padding: 50px;
-      padding-top: 125px;
+      padding-bottom: 10px;
+      padding-top: 100px;
 
-      background: #8c9775;
+      background: $font-green;
       list-style-type: none;
       -webkit-font-smoothing: antialiased;
-      /* to stop flickering of text in safari */
 
       transform-origin: 0% 0%;
       transform: translate(-100%, 0);
 
       transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
       a {
-        text-decoration: none;
-        color: #faf8ec;
+        color: $font-beige;
         transition: color 0.3s ease;
         li {
           padding: 10px 0;
-          font-size: 22px;
+          @include text-font(22px, 400, normal);
         }
       }
       a:hover {
@@ -96,11 +98,11 @@
 }
 
 .header {
-  background: #faf8ec;
+  background: $font-beige;
   height: 90px;
   width: 100%;
   @include xs {
-    background: #8c9775;
+    background: $font-green;
     height: 70px;
   }
   .header__wrap {
@@ -117,8 +119,7 @@
     }
     .headerBox {
       .navigation {
-        display: flex;
-        justify-content: space-between;
+        @include flex-between;
 
         @include xs {
           display: none;
@@ -135,7 +136,7 @@
         }
         .navigation__inside-links {
           a {
-            color: #8c9775;
+            color: $font-green;
             @include text-font(25px, 500, normal);
             margin-right: 30px;
           }
