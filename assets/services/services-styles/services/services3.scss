@@ -125,7 +125,7 @@ body {
         border: 2px solid #8C9775;
         border-radius: 1em;
         padding: 20px;
-
+        text-align: justify;
 
         svg {
             width: 100%;
@@ -145,7 +145,7 @@ body {
         max-width: 700px;
     }
 
-    &__container-title {
+    &__title {
         @include heading-font (50px, 400, normal);
         color: $font-green;
         padding-bottom: 20px;
@@ -199,17 +199,18 @@ body {
         padding: 20px;
     }
 
-    &__container-title {
+    &__title {
         @include heading-font (25px, 400, normal);
         color: $font-beige;
         padding-bottom: 20px;
         text-align: center
     }
 
-    &__container-text {
+    &__text {
         @include text-font (16px, 400, normal);
         color: $font-beige;
-        margin-top: 20px;
+        margin-top: 30px;
+        text-align: justify;
     }
 }
 

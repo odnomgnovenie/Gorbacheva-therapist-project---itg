@@ -155,6 +155,7 @@ body {
   border: 2px solid #8C9775;
   border-radius: 1em;
   padding: 20px;
+  text-align: justify;
 }
 .example__item svg {
   width: 100%;
@@ -171,7 +172,7 @@ body {
 .result__container {
   max-width: 700px;
 }
-.result__container-title {
+.result__title {
   font-size: 50px;
   font-family: "Raleway", "arial", sans-serif;
   font-style: normal;
@@ -224,7 +225,7 @@ body {
   border-radius: 1em;
   padding: 20px;
 }
-.duration__container-title {
+.duration__title {
   font-size: 25px;
   font-family: "Raleway", "arial", sans-serif;
   font-style: normal;
@@ -234,14 +235,15 @@ body {
   padding-bottom: 20px;
   text-align: center;
 }
-.duration__container-text {
+.duration__text {
   font-size: 16px;
   font-family: "M PLUS 1p", "arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   color: #FAF8EC;
-  margin-top: 20px;
+  margin-top: 30px;
+  text-align: justify;
 }
 
 .price-connect {
