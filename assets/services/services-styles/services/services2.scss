@@ -27,7 +27,6 @@ body {
 
 .page-wrapper {
     display: flex;
-    justify-content: space-between;
     gap: 100px;
 }
 
@@ -43,6 +42,14 @@ body {
     max-width: 100%;
     display: flex;
     align-items: center;
+    flex: 1;
+    flex-direction: column;
+    gap: 20px;
+
+    &__title {
+        color: $font-green;
+        @include heading-font (25px, 700, normal);
+    }
 
     &__list {
         list-style: none;
@@ -84,17 +91,18 @@ body {
         padding: 20px;
     }
 
-    &__container-title {
+    &__title {
         @include heading-font (25px, 400, normal);
         color: $font-beige;
         padding-bottom: 20px;
         text-align: center
     }
 
-    &__container-text {
+    &__text {
         @include text-font (16px, 400, normal);
         color: $font-beige;
         margin-top: 20px;
+        text-align: justify;
     }
 
     .price-connect {
