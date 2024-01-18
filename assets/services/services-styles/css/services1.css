@@ -17,13 +17,14 @@ a {
   box-sizing: border-box;
 }
 
-.services-page {
+body {
   background-color: #FAF8EC;
 }
-.services-page__container {
+
+.services-page {
   max-width: 1920px;
-  margin-left: 90px;
-  margin-right: 90px;
+  margin: 0 auto;
+  padding: 0 50px;
 }
 .services-page__title {
   text-wrap: balance;
@@ -83,9 +84,6 @@ a {
 
 .requests {
   margin-top: 54px;
-  max-width: 1920px;
-  margin-left: 90px;
-  margin-right: 90px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -139,9 +137,6 @@ a {
 .top-requests {
   display: flex;
   margin-top: 54px;
-  max-width: 1920px;
-  margin-left: 90px;
-  margin-right: 90px;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
@@ -184,9 +179,6 @@ a {
 
 .result {
   margin-top: 54px;
-  max-width: 1920px;
-  margin-left: 90px;
-  margin-right: 90px;
   display: flex;
   justify-content: space-between;
   border: 1px solid #8C9775;
@@ -253,7 +245,7 @@ a {
   border-radius: 1em;
   padding: 20px;
 }
-.duration__container-title {
+.duration__title {
   font-size: 25px;
   font-family: "Raleway", "arial", sans-serif;
   font-style: normal;
@@ -263,7 +255,7 @@ a {
   padding-bottom: 20px;
   text-align: center;
 }
-.duration__container-text {
+.duration__text {
   font-size: 16px;
   font-family: "M PLUS 1p", "arial", sans-serif;
   font-style: normal;

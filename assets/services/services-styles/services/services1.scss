@@ -8,14 +8,14 @@
     box-sizing: border-box;
 }
 
-.services-page {
+body {
     background-color: #FAF8EC;
+}
 
-    &__container {
-        max-width: 1920px;
-        margin-left: 90px;
-        margin-right: 90px;
-    }
+.services-page {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 50px;
 
     &__title {
         text-wrap: balance;
@@ -73,9 +73,6 @@
 
 .requests {
     margin-top: 54px;
-    max-width: 1920px;
-    margin-left: 90px;
-    margin-right: 90px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -121,9 +118,6 @@
 .top-requests {
     display: flex;
     margin-top: 54px;
-    max-width: 1920px;
-    margin-left: 90px;
-    margin-right: 90px;
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
@@ -162,9 +156,6 @@
 
 .result {
     margin-top: 54px;
-    max-width: 1920px;
-    margin-left: 90px;
-    margin-right: 90px;
     display: flex;
     justify-content: space-between;
     border: 1px solid #8C9775;
@@ -231,14 +222,14 @@
         padding: 20px;
     }
 
-    &__container-title {
+    &__title {
         @include heading-font (25px, 400, normal);
         color: $font-beige;
         padding-bottom: 20px;
         text-align: center
     }
 
-    &__container-text {
+    &__text {
         @include text-font (16px, 400, normal);
         color: $font-beige;
         margin-top: 20px;
