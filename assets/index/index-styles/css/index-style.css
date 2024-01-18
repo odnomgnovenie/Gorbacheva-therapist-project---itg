@@ -1,16 +1,18 @@
-@import "/assets/index/index-styles/css/_template.css";
-@import "/assets/index/index-styles/css/_vars.css";
-@import "/assets/index/index-styles/home/_home.css";
-@import "/assets/index/index-styles/about/_about.css";
-@import "/assets/index/index-styles/skills/_skills.css";
-@import "/assets/index/index-styles/achievements/_achievements.css";
-@import "/assets/index/index-styles/problems/_problems.css";
-@import "/assets/index/index-styles/services/_services.css";
-@import "/assets/index/index-styles/invitation/_invitation.css";
-@import "/assets/index/index-styles/reviews/_reviews.css";
-@import "/assets/index/index-styles/smile/_smile.css";
-@import "/assets/index/index-styles/free-resources/_free-resources.css";
-@import "/assets/index/index-styles/footer/_footer.css";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #122947;
+  text-decoration: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -29,13 +31,14 @@ a {
 @media (max-width: 767px) {
   .hamburger_xs {
     display: block;
+    max-width: 200px;
     position: relative;
     top: 10px;
     left: 20px;
     z-index: 1;
     -webkit-user-select: none;
     -moz-user-select: none;
-    user-select: none;
+         user-select: none;
   }
   .hamburger_xs input {
     display: block;
@@ -55,12 +58,11 @@ a {
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-    background: #faf8ec;
+    background: #FAF8EC;
     border-radius: 3px;
     z-index: 1;
     transform-origin: 4px 0px;
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
-      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
   }
   .hamburger_xs span:first-child {
     transform-origin: 0% 0%;
@@ -71,7 +73,7 @@ a {
   .hamburger_xs input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: #faf8ec;
+    background: #FAF8EC;
   }
   .hamburger_xs input:checked ~ span:nth-last-child(3) {
     opacity: 0;
@@ -82,26 +84,29 @@ a {
   }
   .hamburger_xs .menu {
     position: absolute;
-    width: 300px;
+    width: 200px;
     margin: -100px 0 0 -50px;
     padding: 50px;
-    padding-top: 125px;
-    background: #8c9775;
+    padding-bottom: 10px;
+    padding-top: 100px;
+    background: #8C9775;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
-    /* to stop flickering of text in safari */
     transform-origin: 0% 0%;
     transform: translate(-100%, 0);
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
   .hamburger_xs .menu a {
-    text-decoration: none;
-    color: #faf8ec;
+    color: #FAF8EC;
     transition: color 0.3s ease;
   }
   .hamburger_xs .menu a li {
     padding: 10px 0;
     font-size: 22px;
+    font-family: "M PLUS 1p", "arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }
   .hamburger_xs .menu a:hover {
     color: #6a6763;
@@ -111,13 +116,13 @@ a {
   }
 }
 .header {
-  background: #faf8ec;
+  background: #FAF8EC;
   height: 90px;
   width: 100%;
 }
 @media (max-width: 767px) {
   .header {
-    background: #8c9775;
+    background: #8C9775;
     height: 70px;
   }
 }
@@ -139,6 +144,7 @@ a {
 .header .header__wrap .headerBox .navigation {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 @media (max-width: 767px) {
   .header .header__wrap .headerBox .navigation {
@@ -154,11 +160,11 @@ a {
   min-height: 30px;
 }
 .header .header__wrap .headerBox .navigation .navigation__inside-links a {
-  color: #8c9775;
+  color: #8C9775;
   font-size: 25px;
   font-family: "M PLUS 1p", "arial", sans-serif;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   margin-right: 30px;
-} /*# sourceMappingURL=index-style.css.map */
+}/*# sourceMappingURL=index-style.css.map */
