@@ -1,0 +1,88 @@
+.skills {
+    overflow: hidden;
+    max-width: 1920px;
+    margin: 0 auto;
+
+    @include xs {
+        max-width: 768px;
+    }
+
+    &__wrap {
+        background: url(/assets/index/index-images/skills1.jpg);
+        @include background ();
+        width: 1919px;
+        height: 483px;
+
+        @include xs {
+            width: 480px;
+            height: 196px;
+        }
+    }
+}
+
+.skillsBox {
+    width: 670px;
+    height: 583px;
+    background-color: #f4f1ed;
+    padding: 100px;
+
+    @include xs {
+        text-align: center;
+        padding: 60px 31px 110px;
+    }
+
+    &__title {
+        @include heading-font(32px, 500, 130%);
+        margin-bottom: 40px;
+
+        @include xs {
+            @include heading-font(28px, 500, 125%);
+            margin-bottom: 25px;
+        }
+    }
+
+    &__text {
+        max-width: 329px;
+        height: 234px;
+        margin-bottom: 45px;
+
+        @include xs {
+            max-width: 226px;
+            height: unset;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__text p {
+        @include text-font(18px, 400, 145%);
+
+        @include xs {
+            @include text-font(16px, 400, 145%);
+        }
+    }
+
+    &__text p:first-child {
+        @include xs {
+            display: none;
+        }
+    }
+
+    &__text p:last-child {
+        margin-bottom: 0;
+    }
+
+    &__btn {
+        @include flex-center;
+        @include text-font(16px, 500, 140%);
+        @include border;
+        width: 200px;
+        height: 41px;
+
+        @include xs {
+            display: inline-flex;
+            @include text-font(14px, 500, 140%);
+            width: 182px;
+            height: 40px;
+        }
+    }
+}
