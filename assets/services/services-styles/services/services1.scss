@@ -91,6 +91,7 @@ body {
 
         @media screen and (max-width: 1087px) {
             @include text-font (16px, 400, normal);
+            padding-left: 30px;
         }
     }
 
