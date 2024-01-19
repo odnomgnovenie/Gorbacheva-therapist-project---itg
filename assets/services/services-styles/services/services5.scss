@@ -17,11 +17,24 @@ body {
     margin: 0 auto;
     padding: 0 50px;
 
+    @media screen and (max-width: 500px) {
+        padding: 0 10px;
+    }
+
     &__title {
         text-wrap: balance;
         color: $font-green;
         @include heading-font (50px, 400, normal);
         margin-top: 0;
+
+        @media screen and (max-width: 928px) {
+            @include heading-font (30px, 400, normal);
+        }
+
+        @media screen and (max-width: 500px) {
+            @include heading-font (25px, 400, normal);
+            text-align: center;
+        }
     }
 }
 
@@ -29,20 +42,30 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 100px;
+    margin-top: 54px;
+    flex-wrap: wrap;
 }
 
 .image-wrapper {
+    flex: 1 1 50%;
+    max-width: 400px;
+
     &__img {
-        max-width: 400px;
+        width: 100%;
         filter: drop-shadow(0 0 5px #8C9775);
         border-radius: 1em;
+
+        @media screen and (max-width:952px) {
+            height: auto;
+            margin: 0 auto;
+        }
     }
 }
 
 .service-description {
     width: 100%;
     display: flex;
-    flex: 1;
+    flex: 1 1 40%;
     flex-direction: column;
     gap: 20px;
 
@@ -71,6 +94,15 @@ body {
         display: flex;
         flex-direction: column;
         gap: 30px;
+
+        @media screen and (max-width: 1227px) {
+            @include text-font (20px, 400, normal);
+        }
+
+        @media screen and (max-width: 1087px) {
+            @include text-font (16px, 400, normal);
+            padding-left: 30px;
+        }
     }
 
     &__item {
@@ -96,6 +128,8 @@ body {
     margin-top: 54px;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
 
     &__container {
         max-width: 600px;
