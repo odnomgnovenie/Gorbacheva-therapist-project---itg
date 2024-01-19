@@ -1,6 +1,7 @@
 @import '../additional/fonts';
 @import '../additional/vars';
 @import '../additional/template';
+@import '../footer/footer';
 
 * {
     margin: 0;
@@ -8,7 +9,7 @@
     box-sizing: border-box;
 }
 
-body {
+main {
     background-color: #FAF8EC;
 }
 
