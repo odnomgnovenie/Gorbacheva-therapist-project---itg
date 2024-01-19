@@ -8,7 +8,8 @@
     }
 
     &__wrap {
-        background: url(/assets/index/index-images/skills1.jpg);
+        background-color: $background-green;
+
         @include background ();
         width: 1919px;
         height: 483px;
@@ -21,10 +22,10 @@
 }
 
 .skillsBox {
-    width: 670px;
-    height: 583px;
-    background-color: #f4f1ed;
-    padding: 100px;
+    width: 991px;
+    height: 259px;
+    background-color: $background-green;
+    padding: 50px;
 
     @include xs {
         text-align: center;
