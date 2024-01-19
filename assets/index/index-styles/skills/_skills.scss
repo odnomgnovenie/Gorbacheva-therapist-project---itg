@@ -1,5 +1,4 @@
 .skills {
-    overflow: hidden;
     max-width: 1920px;
     margin: 0 auto;
 
@@ -9,7 +8,6 @@
 
     &__wrap {
         background-color: $background-green;
-
         @include background ();
         width: 1919px;
         height: 483px;
@@ -22,6 +20,8 @@
 }
 
 .skillsBox {
+    background: url(/assets/index/index-images/skills1.jpg), lightgray 50% / cover no-repeat;
+    border-radius: 30%;
     width: 991px;
     height: 259px;
     background-color: $background-green;
