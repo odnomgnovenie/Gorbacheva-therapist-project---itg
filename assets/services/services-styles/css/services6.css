@@ -26,6 +26,11 @@ body {
   margin: 0 auto;
   padding: 0 50px;
 }
+@media screen and (max-width: 500px) {
+  .services-page {
+    padding: 0 10px;
+  }
+}
 .services-page__title {
   text-wrap: balance;
   color: #8C9775;
@@ -36,23 +41,54 @@ body {
   line-height: normal;
   margin-top: 0;
 }
+@media screen and (max-width: 928px) {
+  .services-page__title {
+    font-size: 30px;
+    font-family: "Raleway", "arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+@media screen and (max-width: 500px) {
+  .services-page__title {
+    font-size: 25px;
+    font-family: "Raleway", "arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+  }
+}
 
 .page-wrapper {
   display: flex;
   justify-content: space-between;
   gap: 100px;
+  margin-top: 54px;
+  flex-wrap: wrap;
 }
 
-.image-wrapper__img {
+.image-wrapper {
+  flex: 1 1 50%;
   max-width: 400px;
+}
+.image-wrapper__img {
   filter: drop-shadow(0 0 5px #8C9775);
   border-radius: 1em;
+  width: 100%;
+}
+@media screen and (max-width: 952px) {
+  .image-wrapper {
+    height: auto;
+    margin: 0 auto;
+  }
 }
 
 .service-description {
   width: 100%;
   display: flex;
-  flex: 1;
+  flex: 1 1 40%;
   flex-direction: column;
   gap: 20px;
 }
@@ -76,6 +112,25 @@ body {
   flex-direction: column;
   gap: 30px;
 }
+@media screen and (max-width: 1227px) {
+  .service-description__list {
+    font-size: 20px;
+    font-family: "M PLUS 1p", "arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+@media screen and (max-width: 1087px) {
+  .service-description__list {
+    font-size: 16px;
+    font-family: "M PLUS 1p", "arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 30px;
+  }
+}
 .service-description__item {
   position: relative;
   text-align: justify;
@@ -93,13 +148,115 @@ body {
   background-size: contain;
 }
 
+.result {
+  margin-top: 54px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #8C9775;
+  padding: 20px;
+  border-radius: 1em;
+  flex-wrap: wrap;
+}
+.result__container {
+  max-width: 700px;
+}
+.result__title {
+  font-size: 50px;
+  font-family: "Raleway", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #8C9775;
+  padding-bottom: 20px;
+}
+@media screen and (max-width: 928px) {
+  .result__title {
+    font-size: 30px;
+    font-family: "Raleway", "arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+@media screen and (max-width: 500px) {
+  .result__title {
+    font-size: 25px;
+    font-family: "Raleway", "arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+  }
+}
+.result__list {
+  list-style: none;
+  font-size: 25px;
+  font-family: "M PLUS 1p", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #8C9775;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (max-width: 928px) {
+  .result__list {
+    font-size: 20px;
+    font-family: "M PLUS 1p", "arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+@media screen and (max-width: 500px) {
+  .result__list {
+    font-size: 16px;
+    font-family: "M PLUS 1p", "arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+.result__item {
+  position: relative;
+}
+.result__item:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -2em;
+  top: 8px;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-image: url("../../services-images/star.svg");
+  background-size: contain;
+}
+@media screen and (max-width: 928px) {
+  .result .result-image {
+    margin: 0 auto;
+  }
+}
+.result .result-image__img {
+  max-width: 400px;
+  object-fit: contain;
+}
+@media screen and (max-width: 558px) {
+  .result .result-image__img {
+    height: auto;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
 .duration {
   margin-top: 54px;
-  max-width: 1920px;
-  margin-left: 90px;
-  margin-right: 90px;
   display: flex;
   justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 .duration__container {
   max-width: 500px;
@@ -107,6 +264,7 @@ body {
   background-color: #8C9775;
   border-radius: 1em;
   padding: 20px;
+  min-height: 243px;
 }
 .duration__title {
   font-size: 25px;
@@ -118,6 +276,15 @@ body {
   padding-bottom: 20px;
   text-align: center;
 }
+@media screen and (max-width: 347px) {
+  .duration__title {
+    font-size: 20px;
+    font-family: "Raleway", "arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
 .duration__text {
   font-size: 16px;
   font-family: "M PLUS 1p", "arial", sans-serif;
@@ -127,6 +294,15 @@ body {
   color: #FAF8EC;
   margin-top: 20px;
   text-align: justify;
+}
+@media screen and (max-width: 347px) {
+  .duration__text {
+    font-size: 14px;
+    font-family: "M PLUS 1p", "arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
 }
 .duration .price-connect {
   max-width: 500px;
@@ -145,11 +321,20 @@ body {
   padding-bottom: 20px;
   text-align: center;
 }
+@media screen and (max-width: 347px) {
+  .duration .price-connect__title {
+    font-size: 20px;
+    font-family: "Raleway", "arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
 .duration .price-connect__title-numbers {
   font-family: Arial, Helvetica, sans-serif;
 }
 .duration .price-connect__subtitle {
-  font-size: 15px;
+  font-size: 16px;
   font-family: "Raleway", "arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -195,6 +380,11 @@ body {
   max-width: max-content;
   margin: 0 auto;
   box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.25);
+}
+@media screen and (max-width: 375px) {
+  .duration .price-connect__link {
+    padding: 1em 2em;
+  }
 }
 
 /*# sourceMappingURL=services6.css.map */

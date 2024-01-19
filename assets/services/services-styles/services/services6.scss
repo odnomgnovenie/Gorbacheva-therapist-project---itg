@@ -17,11 +17,24 @@ body {
     margin: 0 auto;
     padding: 0 50px;
 
+    @media screen and (max-width: 500px) {
+        padding: 0 10px;
+    }
+
     &__title {
         text-wrap: balance;
         color: $font-green;
         @include heading-font (50px, 400, normal);
         margin-top: 0;
+
+        @media screen and (max-width: 928px) {
+            @include heading-font (30px, 400, normal);
+        }
+
+        @media screen and (max-width: 500px) {
+            @include heading-font (25px, 400, normal);
+            text-align: center;
+        }
     }
 }
 
@@ -29,20 +42,31 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 100px;
+    margin-top: 54px;
+    flex-wrap: wrap;
 }
 
 .image-wrapper {
+    flex: 1 1 50%;
+    max-width: 400px;
+
     &__img {
-        max-width: 400px;
         filter: drop-shadow(0 0 5px #8C9775);
         border-radius: 1em;
+        width: 100%;
+
+    }
+
+    @media screen and (max-width:952px) {
+        height: auto;
+        margin: 0 auto;
     }
 }
 
 .service-description {
     width: 100%;
     display: flex;
-    flex: 1;
+    flex: 1 1 40%;
     flex-direction: column;
     gap: 20px;
 
@@ -57,7 +81,16 @@ body {
         color: $font-green;
         display: flex;
         flex-direction: column;
-        gap: 30px
+        gap: 30px;
+
+        @media screen and (max-width: 1227px) {
+            @include text-font (20px, 400, normal);
+        }
+
+        @media screen and (max-width: 1087px) {
+            @include text-font (16px, 400, normal);
+            padding-left: 30px;
+        }
     }
 
     &__item {
@@ -79,13 +112,93 @@ body {
     }
 }
 
+.result {
+    margin-top: 54px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #8C9775;
+    padding: 20px;
+    border-radius: 1em;
+    flex-wrap: wrap;
+
+    &__container {
+        max-width: 700px;
+    }
+
+    &__title {
+        @include heading-font (50px, 400, normal);
+        color: $font-green;
+        padding-bottom: 20px;
+
+        @media screen and (max-width: 928px) {
+            @include heading-font (30px, 400, normal);
+        }
+
+        @media screen and (max-width: 500px) {
+            @include heading-font (25px, 400, normal);
+            text-align: center;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        @include text-font (25px, 400, normal);
+        color: $font-green;
+        padding-left: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @media screen and (max-width: 928px) {
+            @include text-font (20px, 400, normal);
+        }
+
+        @media screen and (max-width: 500px) {
+            @include text-font (16px, 400, normal);
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: -2em;
+            top: 8px;
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-image: url('../../services-images/star.svg');
+            background-size: contain;
+        }
+    }
+
+    .result-image {
+        @media screen and (max-width:928px) {
+            margin: 0 auto;
+        }
+
+        &__img {
+            max-width: 400px;
+            object-fit: contain;
+
+            @media screen and (max-width:558px) {
+                height: auto;
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    }
+}
+
 .duration {
     margin-top: 54px;
-    max-width: 1920px;
-    margin-left: 90px;
-    margin-right: 90px;
     display: flex;
     justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
 
     &__container {
         max-width: 500px;
@@ -93,13 +206,18 @@ body {
         background-color: #8C9775;
         border-radius: 1em;
         padding: 20px;
+        min-height: 243px;
     }
 
     &__title {
         @include heading-font (25px, 400, normal);
         color: $font-beige;
         padding-bottom: 20px;
-        text-align: center
+        text-align: center;
+
+        @media screen and (max-width: 347px) {
+            @include heading-font (20px, 400, normal);
+        }
     }
 
     &__text {
@@ -107,6 +225,10 @@ body {
         color: $font-beige;
         margin-top: 20px;
         text-align: justify;
+
+        @media screen and (max-width: 347px) {
+            @include text-font (14px, 400, normal);
+        }
     }
 
     .price-connect {
@@ -121,6 +243,10 @@ body {
             color: $font-beige;
             padding-bottom: 20px;
             text-align: center;
+
+            @media screen and (max-width: 347px) {
+                @include heading-font (20px, 400, normal);
+            }
         }
 
         &__title-numbers {
@@ -128,7 +254,7 @@ body {
         }
 
         &__subtitle {
-            @include heading-font (15px, 400, normal);
+            @include heading-font (16px, 400, normal);
             color: $font-beige;
             padding: 20px 0 20px;
             text-align: center;
@@ -161,6 +287,10 @@ body {
             max-width: max-content;
             margin: 0 auto;
             box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.25);
+
+            @media screen and (max-width: 375px) {
+                padding: 1em 2em;
+            }
         }
     }
 }
