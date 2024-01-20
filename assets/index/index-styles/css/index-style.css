@@ -629,7 +629,7 @@ a {
   .burger__wrapper_xs input:checked ~ span:nth-last-child(2) {
     transform: rotate(-45deg) translate(0, -1px);
   }
-  .burger__wrapper_xs .menu {
+  .burger__wrapper_xs .footer__list {
     position: absolute;
     width: 200px;
     margin: -100px 0 0 -50px;
@@ -643,11 +643,11 @@ a {
     transform: translate(-100%, 0);
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
-  .burger__wrapper_xs .menu__link {
-    color: #FAF8EC;
+  .burger__wrapper_xs .footer__list__link {
+    color: #8C9775;
     transition: color 0.3s ease;
   }
-  .burger__wrapper_xs .menu__item {
+  .burger__wrapper_xs .footer__list__item {
     padding: 10px 0;
     font-size: 22px;
     font-family: "M PLUS 1p", "arial", sans-serif;
@@ -655,7 +655,7 @@ a {
     font-weight: 400;
     line-height: normal;
   }
-  .burger__wrapper_xs .menu__item:hover {
+  .burger__wrapper_xs .footer__list__item:hover {
     color: #6a6763;
   }
   .burger__wrapper_xs input:checked ~ ul {
@@ -663,7 +663,7 @@ a {
   }
 }
 .footer {
-  background: #FAF8EC;
+  background: #8C9775;
   height: 90px;
   width: 100%;
 }
@@ -673,56 +673,46 @@ a {
     height: 70px;
   }
 }
-.footer__wrap {
+.footer__container {
   max-width: 1024px;
   padding-top: 30px;
   margin: 0 auto;
 }
 @media (max-width: 1024px) {
-  .footer__wrap {
+  .footer__container {
     max-width: 786px;
   }
 }
 @media (max-width: 767px) {
-  .footer__wrap {
+  .footer__container {
     padding-top: 10px;
   }
 }
-
-.footerBox__nav {
+.footer .footer-icons__nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 @media (max-width: 767px) {
-  .footerBox__nav {
+  .footer .footer-icons__nav {
     display: none;
   }
 }
-.footerBox__nav__wrapper {
+.footer .footer-icons__wrapper {
   display: flex;
 }
-.footerBox__nav__wrapper__link__img {
+.footer .footer-icons__img {
   margin-right: 20px;
   max-width: 30px;
   min-height: 30px;
 }
 
-.copyright__wrapper {
-  color: #8C9775;
-  font-size: 16px;
-  font-family: "M PLUS 1p", "arial", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-
-.inside-links__wrapper {
+.inside-links {
   display: flex;
   gap: 30px;
 }
-.inside-links__wrapper__link {
-  color: #8C9775;
+.inside-links__link {
+  color: #FAF8EC;
   font-size: 25px;
   font-family: "M PLUS 1p", "arial", sans-serif;
   font-style: normal;
