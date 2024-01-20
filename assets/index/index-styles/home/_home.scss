@@ -3,15 +3,29 @@
 @import "../additional/vars";
 .home {
   background-color: #8c9775;
+  position: relative;
   .home__vector-1 {
-    position: absolute;
-    height: 500px;
-    right: 0px;
-    top: 290px;
+    @include absolute-right(150px, 0px);
+    height: 300px;
+    @include xs {
+      display: none;
+    }
   }
   .home__vector-2 {
-    position: absolute;
+    @include absolut-top-center(auto, 300px);
     bottom: 0px;
+    height: 90px;
+    @include xs {
+      display: none;
+    }
+  }
+  .home__vector-3 {
+    display: none;
+    @include xs {
+      display: block;
+      position: absolute;
+      @include absolut-top-center(10px, 50px);
+    }
   }
 }
 .home__wrap {
@@ -19,22 +33,54 @@
   flex-direction: column;
   max-width: 1024px;
   margin: auto;
+  @media screen and (max-width: 1024px) {
+    max-width: 800px;
+  }
   .homeBox {
     .homeBox__title {
       @include heading-font(48px, 500, normal);
       color: #faf8ec;
       text-align: center;
       margin-bottom: 60px;
+      text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+      -webkit-text-stroke-width: 1;
+      -webkit-text-stroke-color: $font-beige;
+      @include xs {
+        padding-top: 70px;
+        font-size: 25px;
+      }
     }
   }
   .homeBox:last-child {
     display: flex;
+    margin-bottom: 100px;
+
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 50px;
+    }
+
+    @include xs {
+      flex-direction: column;
+      align-items: center;
+    }
     .imgBox {
       width: 40%;
-      margin-bottom: 250px;
       margin-right: 100px;
+
+      @media screen and (max-width: 1024px) {
+        width: 40%;
+        margin-right: 40px;
+      }
+
+      @include xs {
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 80%;
+      }
+
       img {
         width: 100%;
+        margin: auto;
         border-radius: 500px;
       }
     }
@@ -42,14 +88,40 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      @media screen and (max-width: 1024px) {
+        width: 60%;
+      }
+
+      @include xs {
+        padding-left: 20px;
+        width: 80%;
+      }
       .homeBox__list {
         display: flex;
+        height: 400px;
         flex-direction: column-reverse;
+        justify-content: space-around;
+
+        @media screen and (max-width: 1024) {
+          height: 450px;
+        }
+
+        @include xs {
+          height: 500px;
+        }
+
         .homeBox__item {
           list-style-type: none;
-          @include text-font(18px, 400, normal);
+          @include text-font(22px, 400, normal);
           color: #faf8ec;
-          margin-bottom: 20px;
+          text-shadow: 0px 10px 5px rgba(0, 0, 0, 0.25);
+          -webkit-text-stroke-width: 1;
+          -webkit-text-stroke-color: $font-beige;
+
+          @include xs {
+            text-align: center;
+          }
         }
       }
     }
