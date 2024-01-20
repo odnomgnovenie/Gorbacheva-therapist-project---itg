@@ -11,12 +11,12 @@ a {
   text-decoration: none;
 }
 
-.hamburger_xs {
+.burger__wrapper_xs {
   display: none;
 }
 
 @media (max-width: 767px) {
-  .hamburger_xs {
+  .burger__wrapper_xs {
     display: block;
     max-width: 200px;
     position: relative;
@@ -26,7 +26,7 @@ a {
     -webkit-user-select: none;
     user-select: none;
   }
-  .hamburger_xs input {
+  .burger__wrapper_xs input {
     display: block;
     width: 40px;
     height: 32px;
@@ -40,7 +40,7 @@ a {
     /* and place it over the hamburger */
     -webkit-touch-callout: none;
   }
-  .hamburger_xs span {
+  .burger__wrapper_xs span {
     display: block;
     width: 33px;
     height: 4px;
@@ -52,25 +52,25 @@ a {
     transform-origin: 4px 0px;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
   }
-  .hamburger_xs span:first-child {
+  .burger__wrapper_xs span:first-child {
     transform-origin: 0% 0%;
   }
-  .hamburger_xs span:nth-last-child(2) {
+  .burger__wrapper_xs span:nth-last-child(2) {
     transform-origin: 0% 100%;
   }
-  .hamburger_xs input:checked ~ span {
+  .burger__wrapper_xs input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
     background: #FAF8EC;
   }
-  .hamburger_xs input:checked ~ span:nth-last-child(3) {
+  .burger__wrapper_xs input:checked ~ span:nth-last-child(3) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
   }
-  .hamburger_xs input:checked ~ span:nth-last-child(2) {
+  .burger__wrapper_xs input:checked ~ span:nth-last-child(2) {
     transform: rotate(-45deg) translate(0, -1px);
   }
-  .hamburger_xs .menu {
+  .burger__wrapper_xs .footer__list {
     position: absolute;
     width: 200px;
     margin: -100px 0 0 -50px;
@@ -84,11 +84,11 @@ a {
     transform: translate(-100%, 0);
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
-  .hamburger_xs .menu a {
-    color: #FAF8EC;
+  .burger__wrapper_xs .footer__list__link {
+    color: #8C9775;
     transition: color 0.3s ease;
   }
-  .hamburger_xs .menu a li {
+  .burger__wrapper_xs .footer__list__item {
     padding: 10px 0;
     font-size: 22px;
     font-family: "M PLUS 1p", "arial", sans-serif;
@@ -96,71 +96,65 @@ a {
     font-weight: 400;
     line-height: normal;
   }
-  .hamburger_xs .menu a:hover {
+  .burger__wrapper_xs .footer__list__item:hover {
     color: #6a6763;
   }
-  .hamburger_xs input:checked ~ ul {
+  .burger__wrapper_xs input:checked ~ ul {
     transform: none;
   }
 }
 .footer {
-  background-color: #8C9775;
+  background: #8C9775;
   height: 90px;
   width: 100%;
+  margin-top: 54px;
 }
 @media (max-width: 767px) {
   .footer {
-    background: #FAF8EC;
+    background: #8C9775;
     height: 70px;
   }
 }
-.footer .footer__wrap {
+.footer__container {
   max-width: 1024px;
   padding-top: 30px;
-  margin: auto;
+  margin: 0 auto;
 }
 @media (max-width: 1024px) {
-  .footer .footer__wrap {
+  .footer__container {
     max-width: 786px;
   }
 }
 @media (max-width: 767px) {
-  .footer .footer__wrap {
+  .footer__container {
     padding-top: 10px;
   }
 }
-.footer .footer__wrap .footerBox .navigation {
+.footer .footer-icons__nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 @media (max-width: 767px) {
-  .footer .footer__wrap .footerBox .navigation {
+  .footer .footer-icons__nav {
     display: none;
   }
 }
-.footer .footer__wrap .footerBox .navigation .navigation__sosial-media {
+.footer .footer-icons__wrapper {
   display: flex;
 }
-.footer .footer__wrap .footerBox .navigation .navigation__sosial-media a img {
+.footer .footer-icons__img {
   margin-right: 20px;
   max-width: 30px;
   min-height: 30px;
 }
-.footer .footer__wrap .footerBox .navigation .navigation__copyright {
-  color: #FAF8EC;
-  font-size: 16px;
-  font-family: "M PLUS 1p", "arial", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.footer .footer__wrap .footerBox .navigation .navigation__inside-links {
+
+.inside-links {
   display: flex;
   gap: 30px;
 }
-.footer .footer__wrap .footerBox .navigation .navigation__inside-links a {
-  color: #8C9775;
+.inside-links__link {
+  color: #FAF8EC;
   font-size: 25px;
   font-family: "M PLUS 1p", "arial", sans-serif;
   font-style: normal;
@@ -174,7 +168,7 @@ a {
   box-sizing: border-box;
 }
 
-main {
+body {
   background-color: #FAF8EC;
 }
 

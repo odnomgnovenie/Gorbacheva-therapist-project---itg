@@ -1,9 +1,9 @@
-.hamburger_xs {
+.burger__wrapper_xs {
     display: none;
 }
 
 @include xs {
-    .hamburger_xs {
+    .burger__wrapper_xs {
         display: block;
         max-width: 200px;
         position: relative;
@@ -20,14 +20,11 @@
             position: absolute;
             top: -7px;
             left: -5px;
-
             cursor: pointer;
-
             opacity: 0;
             /* hide this */
             z-index: 2;
             /* and place it over the hamburger */
-
             -webkit-touch-callout: none;
         }
 
@@ -68,35 +65,33 @@
             transform: rotate(-45deg) translate(0, -1px);
         }
 
-        .menu {
+        .footer__list {
             position: absolute;
             width: 200px;
             margin: -100px 0 0 -50px;
             padding: 50px;
             padding-bottom: 10px;
             padding-top: 100px;
-
             background: $font-green;
             list-style-type: none;
             -webkit-font-smoothing: antialiased;
-
             transform-origin: 0% 0%;
             transform: translate(-100%, 0);
-
             transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 
-            a {
-                color: $font-beige;
+            &__link {
+                color: $font-green;
                 transition: color 0.3s ease;
 
-                li {
-                    padding: 10px 0;
-                    @include text-font(22px, 400, normal);
-                }
             }
 
-            a:hover {
-                color: #6a6763;
+            &__item {
+                padding: 10px 0;
+                @include text-font(22px, 400, normal);
+
+                &:hover {
+                    color: #6a6763;
+                }
             }
         }
 
@@ -107,19 +102,20 @@
 }
 
 .footer {
-    background-color: $background-green;
+    background: $font-green;
     height: 90px;
     width: 100%;
+    margin-top: 54px;
 
     @include xs {
-        background: $background-beige;
+        background: $font-green;
         height: 70px;
     }
 
-    .footer__wrap {
+    &__container {
         max-width: 1024px;
         padding-top: 30px;
-        margin: auto;
+        margin: 0 auto;
 
         @media (max-width: 1024px) {
             max-width: 786px;
@@ -128,42 +124,37 @@
         @include xs {
             padding-top: 10px;
         }
+    }
 
-        .footerBox {
-            .navigation {
-                @include flex-between;
+    .footer-icons {
 
-                @include xs {
-                    display: none;
-                }
+        &__nav {
+            @include flex-between;
 
-                .navigation__sosial-media {
-                    display: flex;
-
-                    a {
-                        img {
-                            margin-right: 20px;
-                            max-width: 30px;
-                            min-height: 30px;
-                        }
-                    }
-                }
-
-                .navigation__copyright {
-                    color: $font-beige;
-                    @include text-font(16px, 500, normal);
-                }
-
-                .navigation__inside-links {
-                    display: flex;
-                    gap: 30px;
-
-                    a {
-                        color: $font-green;
-                        @include text-font(25px, 500, normal);
-                    }
-                }
+            @include xs {
+                display: none;
             }
         }
+
+        &__wrapper {
+            display: flex;
+
+        }
+
+        &__img {
+            margin-right: 20px;
+            max-width: 30px;
+            min-height: 30px;
+        }
+    }
+}
+
+.inside-links {
+    display: flex;
+    gap: 30px;
+
+    &__link {
+        color: $font-beige;
+        @include text-font(25px, 500, normal);
     }
 }
