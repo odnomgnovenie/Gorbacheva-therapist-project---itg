@@ -1,0 +1,131 @@
+@import "../additional/template";
+@import "../additional/fonts";
+@import "../additional/vars";
+
+.about {
+  background-color: $background-beige;
+  height: 750px;
+
+  @media screen and (max-width: 1024px) {
+    height: 670px;
+  }
+
+  @include xs {
+    height: 700px;
+  }
+}
+
+.about__wrap {
+  height: 100%;
+  max-width: 1024px;
+  margin: auto;
+  @include flex-around;
+  flex-direction: column;
+
+  @media screen and (max-width: 1024px) {
+    max-width: 800px;
+    justify-content: flex-start;
+  }
+
+  .aboutBox {
+    .aboutBox__title {
+      @include heading-font(48px, 500, normal);
+      color: $font-green;
+      text-align: center;
+
+      @include xs {
+        font-size: 25px;
+      }
+    }
+  }
+  .aboutBox:last-child {
+    display: flex;
+    margin-bottom: 70px;
+
+    @include xs {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .aboutBox__img {
+      position: relative;
+      width: 40%;
+
+      @media screen and (max-width: 1024px) {
+        margin-right: 30px;
+      }
+
+      @include xs {
+        position: static;
+        width: 90%;
+        @include flex-center;
+      }
+
+      .aboutBox__vector1 {
+        @include absolute-right(370px, 250px);
+
+        @media screen and (max-width: 1024px) {
+          @include absolute-right(370px, 140px);
+        }
+
+        @include xs {
+          display: none;
+        }
+      }
+
+      .aboutBox__vector2 {
+        @include absolute-right(450px, 150px);
+
+        @media screen and (max-width: 1024px) {
+          @include absolute-right(450px, 50px);
+        }
+
+        @include xs {
+          display: none;
+        }
+      }
+
+      .aboutBox__img-img {
+        max-height: 450px;
+        position: relative;
+        z-index: 1;
+
+        @include xs {
+          position: static;
+          max-height: 250px;
+        }
+      }
+    }
+    .aboutBox__content {
+      width: 60%;
+
+      @include xs {
+        width: 90%;
+        height: 355px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      .aboutBox__text-big {
+        @include text-font(28px, 500, normal);
+        color: $font-green;
+        margin-bottom: 10px;
+
+        @include xs {
+          @include text-font(22px, 500, normal);
+          margin-bottom: 0;
+        }
+      }
+
+      .aboutBox__text-small {
+        @include text-font(22px, 400, normal);
+        color: $font-green;
+
+        @include xs {
+          @include text-font(18px, 500, normal);
+        }
+      }
+    }
+  }
+}
