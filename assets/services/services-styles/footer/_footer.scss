@@ -64,40 +64,6 @@
         input:checked~span:nth-last-child(2) {
             transform: rotate(-45deg) translate(0, -1px);
         }
-
-        .footer__list {
-            position: absolute;
-            width: 200px;
-            margin: -100px 0 0 -50px;
-            padding: 50px;
-            padding-bottom: 10px;
-            padding-top: 100px;
-            background: $font-green;
-            list-style-type: none;
-            -webkit-font-smoothing: antialiased;
-            transform-origin: 0% 0%;
-            transform: translate(-100%, 0);
-            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-
-            &__link {
-                color: $font-green;
-                transition: color 0.3s ease;
-
-            }
-
-            &__item {
-                padding: 10px 0;
-                @include text-font(22px, 400, normal);
-
-                &:hover {
-                    color: #6a6763;
-                }
-            }
-        }
-
-        input:checked~ul {
-            transform: none;
-        }
     }
 }
 
@@ -106,6 +72,7 @@
     height: 90px;
     width: 100%;
     margin-top: 54px;
+    position: relative;
 
     @include xs {
         background: $font-green;
@@ -127,7 +94,6 @@
     }
 
     .footer-icons {
-
         &__nav {
             @include flex-between;
 
@@ -146,6 +112,33 @@
             max-width: 30px;
             min-height: 30px;
         }
+    }
+
+    &__list {
+        position: absolute;
+        width: 200px;
+        margin: -100px 0 0 -50px;
+        padding: 10px 50px 74px;
+        background-color: $font-green;
+        top: 0;
+        list-style-type: none;
+        transform: translate(-100%, 0);
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    }
+
+    &__link {
+        color: $font-beige;
+        transition: color 0.3s ease;
+        padding: 10px 0;
+        @include text-font(22px, 400, normal);
+
+        &:hover {
+            color: #6a6763;
+        }
+    }
+
+    input:checked~ul {
+        transform: translate(0, 0);
     }
 }
 
