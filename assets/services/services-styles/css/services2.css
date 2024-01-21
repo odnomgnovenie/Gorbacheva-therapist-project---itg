@@ -311,6 +311,10 @@ a {
   max-width: 30px;
   min-height: 30px;
 }
+.header .header__wrap .headerBox .navigation .navigation__inside-links {
+  display: flex;
+  gap: 30px;
+}
 .header .header__wrap .headerBox .navigation .navigation__inside-links a {
   color: #FAF8EC;
   font-size: 25px;
@@ -318,7 +322,6 @@ a {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  margin-right: 30px;
 }
 
 * {
