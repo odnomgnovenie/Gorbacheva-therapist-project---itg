@@ -334,15 +334,18 @@ body {
   background-color: #FAF8EC;
 }
 
-.services-page {
-  max-width: 1920px;
-  margin: 0 auto;
+.main {
   padding: 0 50px;
 }
 @media screen and (max-width: 500px) {
-  .services-page {
+  .main {
     padding: 0 10px;
   }
+}
+
+.services-page {
+  max-width: 1920px;
+  margin: 0 auto;
 }
 .services-page__title {
   text-wrap: balance;
@@ -372,14 +375,6 @@ body {
     line-height: normal;
     text-align: center;
   }
-}
-
-.page-wrapper {
-  display: flex;
-  justify-content: space-between;
-  gap: 100px;
-  margin-top: 54px;
-  flex-wrap: wrap;
 }
 
 .page-wrapper {
