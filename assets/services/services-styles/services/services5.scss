@@ -2,6 +2,7 @@
 @import '../additional/vars';
 @import '../additional/template';
 @import '../footer/footer';
+@import '../header/header';
 
 * {
     margin: 0;
@@ -26,7 +27,7 @@ body {
         text-wrap: balance;
         color: $font-green;
         @include heading-font (50px, 400, normal);
-        margin-top: 0;
+        margin-top: 54px;
 
         @media screen and (max-width: 928px) {
             @include heading-font (30px, 400, normal);
