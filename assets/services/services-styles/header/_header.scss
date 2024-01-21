@@ -151,10 +151,12 @@
                 }
 
                 .navigation__inside-links {
+                    display: flex;
+                    gap: 30px;
+
                     a {
                         color: $font-beige;
                         @include text-font(25px, 500, normal);
-                        margin-right: 30px;
                     }
                 }
             }
