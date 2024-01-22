@@ -31,10 +31,14 @@
 .home__wrap {
   display: flex;
   flex-direction: column;
+  align-items: center;
   max-width: 1024px;
   margin: auto;
   @media screen and (max-width: 1024px) {
     max-width: 800px;
+  }
+  @include xs {
+    max-width: 100vw;
   }
   .homeBox {
     .homeBox__title {
@@ -94,7 +98,6 @@
       }
 
       @include xs {
-        padding-left: 20px;
         width: 80%;
       }
       .homeBox__list {
