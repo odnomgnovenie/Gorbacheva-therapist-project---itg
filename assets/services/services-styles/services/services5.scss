@@ -1,3 +1,251 @@
 @import '../additional/fonts';
 @import '../additional/vars';
 @import '../additional/template';
+@import '../footer/footer';
+@import '../header/header';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FAF8EC;
+}
+
+.main {
+    padding: 0 50px;
+
+    @media screen and (max-width: 500px) {
+        padding: 0 10px;
+    }
+}
+
+.services-page {
+    max-width: 1920px;
+    margin: 0 auto;
+
+    &__title {
+        text-wrap: balance;
+        color: $font-green;
+        @include heading-font (50px, 400, normal);
+        margin-top: 54px;
+
+        @media screen and (max-width: 928px) {
+            @include heading-font (30px, 400, normal);
+        }
+
+        @media screen and (max-width: 500px) {
+            @include heading-font (25px, 400, normal);
+            text-align: center;
+        }
+    }
+}
+
+.page-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    margin-top: 54px;
+    flex-wrap: wrap;
+}
+
+.image-wrapper {
+    flex: 1 1 50%;
+    max-width: 400px;
+
+    &__img {
+        width: 100%;
+        filter: drop-shadow(0 0 5px #8C9775);
+        border-radius: 1em;
+
+        @media screen and (max-width:952px) {
+            height: auto;
+            margin: 0 auto;
+        }
+    }
+}
+
+.service-description {
+    width: 100%;
+    display: flex;
+    flex: 1 1 40%;
+    flex-direction: column;
+    gap: 20px;
+
+    &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: url('../../services-images/services5/golden-flowers.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right bottom;
+    }
+
+
+
+    &__title {
+        color: $font-green;
+        @include heading-font (25px, 700, normal);
+    }
+
+    &__list {
+        list-style: none;
+        @include text-font (25px, 400, normal);
+        color: $font-green;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @media screen and (max-width: 1227px) {
+            @include text-font (20px, 400, normal);
+        }
+
+        @media screen and (max-width: 1087px) {
+            @include text-font (16px, 400, normal);
+            padding-left: 30px;
+        }
+    }
+
+    &__item {
+        position: relative;
+        text-align: justify;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: -2em;
+            top: 8px;
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-image: url('../../services-images/star.svg');
+            background-size: contain;
+        }
+    }
+}
+
+.meditations {
+    margin-top: 54px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    &__container {
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border: 2px solid #8C9775;
+        border-radius: 1em;
+        padding: 20px;
+    }
+
+    &__title {
+        color: $font-green;
+        @include heading-font (25px, 700, normal);
+        text-align: center;
+    }
+
+    &__text {
+        text-align: justify;
+        @include text-font (16px, 400, normal);
+        color: $font-green;
+    }
+
+}
+
+.results {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        color: $font-green;
+        @include heading-font (25px, 700, normal);
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        @include text-font (16px, 400, normal);
+        color: $font-green;
+        padding-left: 40px;
+    }
+
+    &__item {
+        position: relative;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: -2em;
+            top: 4px;
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-image: url('../../services-images/star.svg');
+            background-size: contain;
+        }
+    }
+}
+
+.price {
+    &__title {
+        color: $font-green;
+        @include heading-font (25px, 700, normal);
+        text-align: center;
+    }
+
+    &__title-numbers {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+
+.price-connect {
+    margin-top: auto;
+
+    &__link {
+        text-decoration: none;
+        @include text-font (16px, 400, normal);
+        color: $font-beige;
+        background-color: #8C9775;
+        display: grid;
+        place-items: center;
+        padding: 1em 4em;
+        border: 2px solid #8C9775;
+        border-radius: 40px;
+        max-width: max-content;
+        margin: 0 auto;
+        box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    &__subtitle {
+        @include heading-font (15px, 400, normal);
+        color: $font-green;
+        padding: 20px 0 20px;
+        text-align: center;
+    }
+
+    &__tlg {
+        @include heading-font (15px, 400, normal);
+        color: $font-green;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    &__text {
+        @include text-font (12px, 400, normal);
+        color: $font-green;
+        font-style: italic;
+        text-align: center;
+    }
+}
