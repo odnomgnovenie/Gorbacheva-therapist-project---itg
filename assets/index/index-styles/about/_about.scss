@@ -4,7 +4,6 @@
 
 .about {
   background-color: $background-beige;
-  padding: 0 50px;
 
   @media screen and (max-width: 1024px) {
     height: auto;
@@ -15,7 +14,7 @@
   }
 
   &__wrap {
-    max-width: 1240px;
+    max-width: 1024px;
     margin: 0 auto;
     padding-bottom: 50px;
     display: flex;
@@ -25,6 +24,10 @@
     @media screen and (max-width: 1024px) {
       max-width: 800px;
       justify-content: flex-start;
+    }
+
+    @include xs {
+      margin: 0 10px;
     }
   }
 
@@ -38,7 +41,9 @@
     }
 
     @include xs {
-      font-size: 25px;
+      font-size: 30px;
+      font-weight: 700;
+      text-align: center;
     }
   }
 }
@@ -54,6 +59,7 @@
     flex-direction: column;
     align-items: center;
     gap: 50px;
+    padding-top: 30px;
   }
 
   &__img {

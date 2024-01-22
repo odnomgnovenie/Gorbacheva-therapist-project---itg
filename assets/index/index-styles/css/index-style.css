@@ -926,7 +926,6 @@ a {
 
 .about {
   background-color: #FAF8EC;
-  padding: 0 50px;
 }
 @media screen and (max-width: 1024px) {
   .about {
@@ -939,7 +938,7 @@ a {
   }
 }
 .about__wrap {
-  max-width: 1240px;
+  max-width: 1024px;
   margin: 0 auto;
   padding-bottom: 50px;
   display: flex;
@@ -950,6 +949,11 @@ a {
   .about__wrap {
     max-width: 800px;
     justify-content: flex-start;
+  }
+}
+@media (max-width: 767px) {
+  .about__wrap {
+    margin: 0 10px;
   }
 }
 .about__title {
@@ -968,7 +972,9 @@ a {
 }
 @media (max-width: 767px) {
   .about__title {
-    font-size: 25px;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
   }
 }
 
@@ -984,6 +990,7 @@ a {
     flex-direction: column;
     align-items: center;
     gap: 50px;
+    padding-top: 30px;
   }
 }
 .aboutBox__img {
