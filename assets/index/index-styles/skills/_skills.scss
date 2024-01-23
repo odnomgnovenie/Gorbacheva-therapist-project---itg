@@ -1,45 +1,57 @@
 .skills {
-    max-width: 1920px;
+    max-width: auto;
     margin: 0 auto;
+    /* 
+    @include sm {
+        max-width: 1024px;
+    }
 
     @include xs {
         max-width: 768px;
-    }
+    } */
 
     &__wrap {
+        @include flex-between;
         background-color: $background-green;
         @include background ();
-        width: 1919px;
+        width: 100%;
         height: 483px;
+        gap: 30px;
 
-        @include xs {
-            width: 480px;
-            height: 196px;
+        @include sm {
+            height: 340px;
+
+            @include xs {
+                height: 196px;
+            }
         }
     }
 }
 
 .skillsBox {
-    background: url(/assets/index/index-images/skills1.jpg), lightgray 50% / cover no-repeat;
-    border-radius: 30%;
-    width: 991px;
-    height: 259px;
-    background-color: $background-green;
     padding: 50px;
 
     @include xs {
         text-align: center;
-        padding: 60px 31px 110px;
+        /* padding: 60px 31px 110px; */
     }
 
     &__title {
-        @include heading-font(32px, 500, 130%);
-        margin-bottom: 40px;
+        text-wrap: balance;
+        color: $font-beige;
+        @include heading-font (50px, 400, normal);
+        margin-top: 54px;
 
-        @include xs {
-            @include heading-font(28px, 500, 125%);
+        @include sm {
+            @include heading-font (30px, 400, normal);
             margin-bottom: 25px;
         }
+
+        @include xs {
+            @include heading-font (25px, 400, normal);
+            text-align: center;
+        }
+
     }
 
     &__text {

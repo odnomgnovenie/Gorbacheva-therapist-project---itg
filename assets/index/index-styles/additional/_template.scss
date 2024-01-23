@@ -1,5 +1,4 @@
 a {
-    color: #122947;
     text-decoration: none;
 }
 
@@ -85,6 +84,13 @@ a {
 //миксин адаптива под смартфон
 @mixin xs {
     @media (max-width: 767px) {
+        @content;
+    }
+}
+
+//миксин адаптива под планшет
+@mixin sm {
+    @media screen and (max-width: 1024px) {
         @content;
     }
 }
