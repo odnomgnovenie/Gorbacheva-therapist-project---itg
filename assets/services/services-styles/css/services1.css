@@ -232,44 +232,13 @@ a {
   .burger__wrapper_xs input:checked ~ span:nth-last-child(2) {
     transform: rotate(-45deg) translate(0, -1px);
   }
-  .burger__wrapper_xs .footer__list {
-    position: absolute;
-    width: 200px;
-    margin: -100px 0 0 -50px;
-    padding: 50px;
-    padding-bottom: 10px;
-    padding-top: 100px;
-    background: #8C9775;
-    list-style-type: none;
-    -webkit-font-smoothing: antialiased;
-    transform-origin: 0% 0%;
-    transform: translate(-100%, 0);
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  }
-  .burger__wrapper_xs .footer__list__link {
-    color: #8C9775;
-    transition: color 0.3s ease;
-  }
-  .burger__wrapper_xs .footer__list__item {
-    padding: 10px 0;
-    font-size: 22px;
-    font-family: "M PLUS 1p", "arial", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-  .burger__wrapper_xs .footer__list__item:hover {
-    color: #6a6763;
-  }
-  .burger__wrapper_xs input:checked ~ ul {
-    transform: none;
-  }
 }
 .footer {
   background: #8C9775;
   height: 90px;
   width: 100%;
   margin-top: 54px;
+  position: relative;
 }
 @media (max-width: 767px) {
   .footer {
@@ -310,6 +279,33 @@ a {
   max-width: 30px;
   min-height: 30px;
 }
+.footer__list {
+  position: absolute;
+  width: 200px;
+  margin: -100px 0 0 -50px;
+  padding: 10px 50px 74px;
+  background-color: #8C9775;
+  top: 0;
+  list-style-type: none;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+.footer__link {
+  color: #FAF8EC;
+  transition: color 0.3s ease;
+  padding: 10px 0;
+  font-size: 22px;
+  font-family: "M PLUS 1p", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.footer__link:hover {
+  color: #6a6763;
+}
+.footer input:checked ~ ul {
+  transform: translate(0, 0);
+}
 
 .inside-links {
   display: flex;
@@ -334,15 +330,18 @@ body {
   background-color: #FAF8EC;
 }
 
-.services-page {
-  max-width: 1920px;
-  margin: 0 auto;
+.main {
   padding: 0 50px;
 }
 @media screen and (max-width: 500px) {
-  .services-page {
+  .main {
     padding: 0 10px;
   }
+}
+
+.services-page {
+  max-width: 1920px;
+  margin: 0 auto;
 }
 .services-page__title {
   text-wrap: balance;
