@@ -1190,6 +1190,114 @@ a {
   }
 }
 
+.services {
+  background-color: #8C9775;
+}
+.services__wrap {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+@media (max-width: 1024px) {
+  .services__wrap {
+    max-width: 800px;
+  }
+}
+.services__wrap .servicesBox:last-child {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 94%;
+  margin: 0 auto;
+  margin-bottom: 74px;
+}
+@media (max-width: 1160px) {
+  .services__wrap .servicesBox:last-child {
+    gap: 20px;
+  }
+}
+
+.servicesBox-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.servicesBox__title-main {
+  font-size: 50px;
+  font-family: "Raleway", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #FAF8EC;
+}
+.servicesBox__subtitle {
+  font-size: 30px;
+  font-family: "Raleway", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #FAF8EC;
+  text-align: center;
+}
+.servicesBox__container {
+  max-width: 300px;
+  height: 400px;
+  background-color: #FAF8EC;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: -8px 8px 56px 19px rgba(0, 0, 0, 0.2509803922);
+}
+@media (max-width: 1160px) {
+  .servicesBox__container {
+    max-width: 300px;
+    min-height: 30vh;
+  }
+}
+.servicesBox__title {
+  font-size: 22px;
+  font-family: "M PLUS 1p", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: #8C9775;
+  text-align: center;
+}
+.servicesBox__text {
+  font-size: 18px;
+  font-family: "M PLUS 1p", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #8C9775;
+  text-align: center;
+}
+.servicesBox__button {
+  font-size: 16px;
+  font-family: "M PLUS 1p", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #8C9775;
+  max-width: 209px;
+  min-height: 43px;
+  width: 100%;
+  background-color: inherit;
+  border: 2px solid #8C9775;
+  border-radius: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+
 .burger__wrapper_xs {
   display: none;
 }
