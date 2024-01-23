@@ -721,7 +721,6 @@ a {
 .home__wrap .homeBox:last-child .imgBox img {
   width: 100%;
   margin: auto;
-  border-radius: 500px;
 }
 .home__wrap .homeBox:last-child .homeBox__content {
   display: flex;
@@ -1069,7 +1068,7 @@ a {
   width: 20px;
   height: 20px;
   background-repeat: no-repeat;
-  background-image: url("../../index-images/star.svg");
+  background-image: url("../../index-images/about-home/star.svg");
   background-size: contain;
 }
 
