@@ -2,5 +2,12 @@ body {
     font-family: 'M PLUS 1p', sans-serif;
     font-weight: 400;
     background: #f8f8f6;
-    color: #122947;
+}
+
+main {
+    padding: 0 50px;
+
+    @include xs {
+        padding: 0 30px 0 30px;
+    }
 }

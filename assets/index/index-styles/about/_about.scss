@@ -1,7 +1,3 @@
-@import "../additional/template";
-@import "../additional/fonts";
-@import "../additional/vars";
-
 .about {
   background-color: $background-beige;
 
@@ -118,6 +114,7 @@
       font-size: 18px;
     }
   }
+
   .aboutBox__text-small:before {
     content: "";
     display: block;

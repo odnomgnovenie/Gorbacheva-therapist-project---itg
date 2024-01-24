@@ -1,89 +1,132 @@
 .skills {
-  overflow: hidden;
   max-width: 1920px;
   margin: 0 auto;
+  background-color: $background-green;
+
+  @include sm {
+    max-width: 1024px;
+  }
 
   @include xs {
     max-width: 768px;
   }
 
   &__wrap {
-    background-color: $background-green;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
 
-    @include background();
-    width: 1919px;
-    height: 483px;
-
-    @include xs {
-      width: 480px;
-      height: 196px;
+    @include sm {
+      gap: unset;
     }
   }
 }
 
-.skillsBox {
-  width: 991px;
-  height: 259px;
-  background-color: $background-green;
-  padding: 50px;
+.skills-container {
+  display: flex;
+  gap: 40px;
+  padding-top: 30px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
-  @include xs {
-    text-align: center;
-    padding: 60px 31px 110px;
+}
+
+.skillsBoxImg {
+  flex: 1 1 50%;
+  max-width: 400px;
+
+  &__img {
+    filter: drop-shadow(0 0 5px #8C9775);
+    border-radius: 1em;
+    width: 100%;
+
+    @media screen and (max-width:952px) {
+      height: auto;
+      margin: 0 auto;
+    }
   }
+}
+
+
+.skillsBox {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  flex: 1 1 40%;
+  flex-direction: column;
+  gap: 30px;
 
   &__title {
-    @include heading-font(32px, 500, 130%);
-    margin-bottom: 40px;
+    color: $font-beige;
+    @include heading-font (30px, 700, normal);
+
+    @include sm {
+      @include heading-font (25px, 400, normal);
+    }
 
     @include xs {
-      @include heading-font(28px, 500, 125%);
-      margin-bottom: 25px;
+      @include heading-font (20px, 400, normal);
+      text-align: center;
+    }
+
+  }
+
+  &__content {
+    list-style: none;
+    @include text-font (25px, 400, normal);
+    color: $font-beige;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @media screen and (max-width: 1227px) {
+      @include text-font (20px, 400, normal);
+
+    }
+
+    @media screen and (max-width: 1087px) {
+      @include text-font (16px, 400, normal);
     }
   }
 
-  &__text {
-    max-width: 329px;
-    height: 234px;
-    margin-bottom: 45px;
+  &__item {
+    position: relative;
 
-    @include xs {
-      max-width: 226px;
-      height: unset;
-      margin-bottom: 30px;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: -2em;
+      top: 8px;
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+      background-image: url('/assets/services/services-images/star.svg');
+      background-size: contain;
     }
-  }
-
-  &__text p {
-    @include text-font(18px, 400, 145%);
-
-    @include xs {
-      @include text-font(16px, 400, 145%);
-    }
-  }
-
-  &__text p:first-child {
-    @include xs {
-      display: none;
-    }
-  }
-
-  &__text p:last-child {
-    margin-bottom: 0;
   }
 
   &__btn {
-    @include flex-center;
-    @include text-font(16px, 500, 140%);
-    @include border;
-    width: 200px;
-    height: 41px;
+    margin: 0 auto;
+    text-decoration: none;
+    @include text-font (16px, 400, normal);
+    color: $font-beige;
+    background-color: $background-green;
+    display: grid;
+    place-items: center;
+    padding: 1em 4em;
+    @include border-beige;
+    max-width: max-content;
+    box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 45px;
+
 
     @include xs {
+      margin: 0 auto;
       display: inline-flex;
-      @include text-font(14px, 500, 140%);
-      width: 182px;
-      height: 40px;
+      @include text-font(12px, 500, 140%);
+      margin-bottom: 30px;
     }
   }
 }
