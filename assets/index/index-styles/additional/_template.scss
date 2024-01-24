@@ -32,9 +32,14 @@ a {
 }
 
 //миксин для обводки овальной формы зеленого цвета в ресурсах и стилях
-@mixin border {
+@mixin border-green {
     border-radius: 23px;
     border: 3px solid #8C9775;
+}
+
+@mixin border-beige {
+    border: 2px solid #FAF8EC;
+    border-radius: 40px;
 }
 
 //миксин свойств фона
@@ -83,7 +88,7 @@ a {
 
 //миксин адаптива под смартфон
 @mixin xs {
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
         @content;
     }
 }
