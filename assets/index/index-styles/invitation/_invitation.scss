@@ -1,0 +1,58 @@
+.invitation {
+  background-color: $background-beige;
+  height: 300px;
+
+  &__wrap {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding-top: 54px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    @include xs {
+      max-width: 500px;
+    }
+  }
+}
+
+.invitationBox {
+  @include flex-center;
+  flex-direction: column;
+
+  &__title {
+    @include heading-font(50px, 500, normal);
+    color: $font-green;
+
+    @include xs {
+      font-size: 35px;
+      text-align: center;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    gap: 200px;
+
+    a {
+      width: 60px;
+      img {
+        width: 100%;
+      }
+    }
+
+    @include xs {
+      gap: 20px;
+    }
+  }
+
+  &__link {
+    img {
+      max-height: 100px;
+
+      @include xs {
+        max-height: 50px;
+      }
+    }
+  }
+}
