@@ -795,68 +795,6 @@ a {
   cursor: pointer;
 }
 
-.invitation {
-  background-color: #FAF8EC;
-  height: 300px;
-}
-.invitation__wrap {
-  max-width: 1024px;
-  margin: 0 auto;
-  padding-top: 54px;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-}
-@media (max-width: 768px) {
-  .invitation__wrap {
-    max-width: 500px;
-  }
-}
-
-.invitationBox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.invitationBox__title {
-  font-size: 50px;
-  font-family: "Raleway", "arial", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  color: #8C9775;
-}
-@media (max-width: 768px) {
-  .invitationBox__title {
-    font-size: 35px;
-    text-align: center;
-  }
-}
-.invitationBox__icons {
-  display: flex;
-  gap: 200px;
-}
-.invitationBox__icons a {
-  width: 50px;
-}
-.invitationBox__icons a img {
-  width: 100%;
-}
-@media (max-width: 768px) {
-  .invitationBox__icons {
-    gap: 20px;
-  }
-}
-.invitationBox__link img {
-  max-height: 100px;
-}
-@media (max-width: 768px) {
-  .invitationBox__link img {
-    max-height: 50px;
-  }
-}
-
 .burger__wrapper_xs {
   display: none;
 }
