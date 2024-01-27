@@ -146,6 +146,8 @@
         margin-right: 20px;
         max-width: 30px;
         min-height: 30px;
+        border-radius: 25px;
+        object-fit: cover;
       }
     }
   }
@@ -166,24 +168,18 @@
     padding: 0.5em 1em;
     max-width: max-content;
 
-    background-color: $background-green;
+    @include text-font(25px, 400, normal);
+    color: $font-green;
+    background-color: inherit;
+    text-align: center;
+    text-decoration: none;
 
     display: grid;
     place-items: center;
 
-    @include border-green;
-    border-radius: 37px;
-    box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.25);
+    border: 1px solid $background-green;
+    border-radius: 40px;
 
-    text-decoration: none;
-    @include text-font(25px, 400, normal);
-    color: $font-beige;
-
-    @include xs {
-      margin: 0 auto;
-      display: inline-flex;
-      @include text-font(12px, 500, 140%);
-      margin-bottom: 30px;
-    }
+    cursor: pointer;
   }
 }

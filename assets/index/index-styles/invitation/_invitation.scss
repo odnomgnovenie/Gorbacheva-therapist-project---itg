@@ -1,14 +1,14 @@
 .invitation {
   background-color: $background-beige;
-  height: 300px;
+  height: 200px;
 
   &__wrap {
     max-width: 1024px;
     margin: 0 auto;
-    padding-top: 54px;
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 20px;
 
     @include xs {
       max-width: 500px;
@@ -36,8 +36,13 @@
 
     a {
       width: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       img {
         width: 100%;
+        height: 100%;
+        border-radius: 35px;
       }
     }
 
