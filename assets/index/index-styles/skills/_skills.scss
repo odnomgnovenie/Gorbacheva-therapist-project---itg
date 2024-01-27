@@ -1,131 +1,110 @@
 .skills {
-    max-width: 1920px;
-    margin: 0 auto;
-    background-color: $background-green;
-
-    @include sm {
-        max-width: 1024px;
-    }
-
-    @include xs {
-        max-width: 768px;
-    }
+    background-color: $background-beige;
 
     &__wrap {
-        display: flex;
-        justify-content: space-between;
-        gap: 50px;
+        max-width: 1024px;
+        @include border-green;
+        @include background ();
+        border-radius: 15px;
+        margin: 0 auto;
+        @include flex-between;
         flex-wrap: wrap;
 
         @include sm {
-            gap: unset;
+            max-width: 800px;
         }
     }
+}
 
-    .skills-container {
-        display: flex;
-        gap: 40px;
-        padding-top: 30px;
-        justify-content: space-between;
-        flex-wrap: wrap;
+.skills-container {
+    display: flex;
+
+    padding-top: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.skillsBox {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+
+
+    &__title {
+        color: $font-green;
+        text-align: center;
+        @include heading-font (30px, 700, normal);
+        text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+        -webkit-text-stroke-width: 1;
+        -webkit-text-stroke-color: $font-beige;
+
+        @include sm {
+            @include heading-font (25px, 400, normal);
+        }
+
+        @include xs {
+            @include heading-font (20px, 400, normal);
+        }
 
     }
 
-    .skillsBoxImg {
-        flex: 1 1 50%;
-        max-width: 400px;
+    &__content {
+        list-style: none;
+        @include text-font (25px, 400, normal);
+        color: $font-green;
+        padding: 0 55px;
 
-        &__img {
-            filter: drop-shadow(0 0 5px #8C9775);
-            border-radius: 1em;
-            width: 100%;
-
-            @media screen and (max-width:952px) {
-                height: auto;
-                margin: 0 auto;
-            }
-        }
-    }
-
-    .skillsBox {
-        max-width: 100%;
-        display: flex;
-        align-items: center;
-        flex: 1 1 40%;
-        flex-direction: column;
-        gap: 30px;
-
-        &__title {
-            color: $font-beige;
-            @include heading-font (30px, 700, normal);
-
-            @include sm {
-                @include heading-font (25px, 400, normal);
-            }
-
-            @include xs {
-                @include heading-font (20px, 400, normal);
-                text-align: center;
-            }
+        @media screen and (max-width: 1227px) {
+            @include text-font (20px, 400, normal);
 
         }
 
-        &__content {
-            list-style: none;
-            @include text-font (25px, 400, normal);
-            color: $font-beige;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-
-            @media screen and (max-width: 1227px) {
-                @include text-font (20px, 400, normal);
-
-            }
-
-            @media screen and (max-width: 1087px) {
-                @include text-font (16px, 400, normal);
-            }
-        }
-
-        &__item {
-            position: relative;
-
-            &:before {
-                content: '';
-                display: block;
-                position: absolute;
-                left: -2em;
-                top: 8px;
-                width: 20px;
-                height: 20px;
-                background-repeat: no-repeat;
-                background-image: url('/assets/services/services-images/star.svg');
-                background-size: contain;
-            }
-        }
-
-        &__btn {
-            margin: 0 auto;
-            text-decoration: none;
+        @media screen and (max-width: 1087px) {
             @include text-font (16px, 400, normal);
-            color: $font-beige;
-            background-color: $background-green;
-            display: grid;
-            place-items: center;
-            padding: 1em 4em;
-            @include border-beige;
-            max-width: max-content;
-            box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.25);
-            margin-bottom: 45px;
+        }
+    }
+
+    &__text {
+        position: relative;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: -1.5em;
+            top: 8px;
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-image: url('/assets/index/index-images/skills-images/star.svg');
+            background-size: contain;
+
+        }
+    }
+
+    &__btn {
+        margin: 0 auto;
+        text-decoration: none;
+        @include text-font (16px, 400, normal);
+        color: $font-green;
+        background-color: #f7f7ed;
+        display: grid;
+        place-items: center;
+        padding: 1em 4em;
+        @include border-green;
+        max-width: max-content;
+        box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.25);
+        margin-bottom: 45px;
 
 
-            @include xs {
-                margin: 0 auto;
-                display: inline-flex;
-                @include text-font(12px, 500, 140%);
-                margin-bottom: 30px;
-            }
+        @include xs {
+            margin: 0 auto;
+            display: inline-flex;
+            @include text-font(12px, 500, 140%);
+            margin-bottom: 30px;
         }
     }
 }
