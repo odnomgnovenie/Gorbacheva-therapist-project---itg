@@ -728,7 +728,7 @@ a {
   flex-wrap: wrap;
   gap: 20px;
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 @media screen and (max-width: 1024px) {
   .services__wrap .servicesBox:last-child {
