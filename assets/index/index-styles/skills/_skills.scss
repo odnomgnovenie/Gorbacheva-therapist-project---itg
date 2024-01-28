@@ -117,6 +117,7 @@
       display: inline-flex;
       @include text-font(13px, 500, 140%);
       margin-bottom: 30px;
+      padding: 1em 3em;
     }
   }
 }
