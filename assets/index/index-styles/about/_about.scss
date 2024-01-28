@@ -1,18 +1,12 @@
 .about {
   background-color: $background-beige;
-
-  @media screen and (max-width: 1024px) {
-    height: auto;
-  }
-
-  @include xs {
-    height: auto;
-  }
+  height: auto;
 
   &__wrap {
     max-width: 1024px;
     margin: 0 auto;
     padding-bottom: 50px;
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -26,71 +20,16 @@
       margin: 0 10px;
     }
   }
-
-  &__title {
-    @include heading-font(50px, 400, normal);
-    color: $font-green;
-    padding-top: 50px;
-
-    @media screen and (max-width: 1024px) {
-      font-size: 40px;
-    }
-
-    @include xs {
-      font-size: 30px;
-      font-weight: 700;
-      text-align: center;
-    }
-  }
 }
 
 .aboutBox {
+  width: 100%;
   display: flex;
-  justify-content: space-around;
-  gap: 100px;
-  padding-top: 60px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 35px;
 
-  @include xs {
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
-    padding-top: 30px;
-  }
-
-  &__img {
-    flex: 1 1 40%;
-    max-width: 400px;
-
-    @include xs {
-      position: static;
-      width: 90%;
-      margin-right: 0px;
-      @include flex-center;
-    }
-  }
-
-  &__img-img {
-    filter: drop-shadow(0 0 5px #8c9775);
-    border-radius: 20px;
-    max-width: 100%;
-
-    @include xs {
-      height: auto;
-      margin: 0 auto;
-    }
-  }
-
-  &__content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 30%;
-    gap: 35px;
-
-    @media screen and (max-width: 1024px) {
-      gap: 20px;
-    }
+  @media screen and (max-width: 1024px) {
+    gap: 20px;
   }
 
   &__text-big {
@@ -102,29 +41,39 @@
     }
   }
 
-  &__text-small {
-    list-style: none;
+  &__list {
+    padding-left: 70px;
+    position: relative;
+
     @include text-font(25px, 400, normal);
     color: $font-green;
-    margin-bottom: 20px;
-    position: relative;
-    text-align: justify;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 
     @media screen and (max-width: 1024px) {
       font-size: 18px;
     }
   }
 
-  .aboutBox__text-small:before {
+  &__text-small {
+    position: relative;
+    z-index: 0;
+  }
+
+  &__text-small:before {
     content: "";
     display: block;
     position: absolute;
-    left: -2em;
+    left: -40px;
     top: 8px;
     width: 20px;
     height: 20px;
     background-repeat: no-repeat;
     background-image: url("../../index-images/about-home/star.svg");
-    background-size: contain;
+    background-size: cover;
+    z-index: 1;
   }
 }

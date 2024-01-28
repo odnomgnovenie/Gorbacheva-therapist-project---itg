@@ -95,7 +95,8 @@
 
   &__button {
     @include text-font(16px, 400, normal);
-    color: $font-green;
+    text-decoration: none;
+
     max-width: 209px;
     min-height: 43px;
     width: 100%;
@@ -104,5 +105,9 @@
     border-radius: 40px;
     text-align: center;
     cursor: pointer;
+
+    a {
+      color: $font-green;
+    }
   }
 }

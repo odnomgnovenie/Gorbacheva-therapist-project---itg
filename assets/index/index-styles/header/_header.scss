@@ -53,18 +53,18 @@
       transform-origin: 0% 100%;
     }
 
-    input:checked~span {
+    input:checked ~ span {
       opacity: 1;
       transform: rotate(45deg) translate(-2px, -1px);
       background: $font-beige;
     }
 
-    input:checked~span:nth-last-child(3) {
+    input:checked ~ span:nth-last-child(3) {
       opacity: 0;
       transform: rotate(0deg) scale(0.2, 0.2);
     }
 
-    input:checked~span:nth-last-child(2) {
+    input:checked ~ span:nth-last-child(2) {
       transform: rotate(-45deg) translate(0, -1px);
     }
 
@@ -100,7 +100,7 @@
       }
     }
 
-    input:checked~ul {
+    input:checked ~ ul {
       transform: none;
     }
   }
@@ -116,7 +116,7 @@
     height: 70px;
   }
 
-  .header__wrap {
+  &__wrap {
     max-width: 1024px;
     padding-top: 30px;
     margin: auto;
@@ -128,35 +128,58 @@
     @include xs {
       padding-top: 10px;
     }
+  }
+}
 
-    .headerBox {
-      .navigation {
-        @include flex-between;
+.navigation {
+  @include flex-between;
 
-        @include xs {
-          display: none;
-        }
+  @include xs {
+    display: none;
+  }
 
-        .navigation__sosial-media {
-          display: flex;
+  &__sosial-media {
+    display: flex;
 
-          a {
-            img {
-              margin-right: 20px;
-              max-width: 30px;
-              min-height: 30px;
-            }
-          }
-        }
-
-        .navigation__inside-links {
-          a {
-            color: $font-green;
-            @include text-font(25px, 500, normal);
-            margin-right: 30px;
-          }
-        }
+    a {
+      img {
+        margin-right: 20px;
+        max-width: 30px;
+        min-height: 30px;
+        border-radius: 25px;
+        object-fit: cover;
       }
     }
+  }
+
+  &__inside-links {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    color: $font-green;
+    @include text-font(25px, 500, normal);
+    margin-right: 30px;
+  }
+
+  &__btn {
+    margin: 0 auto;
+    padding: 0.5em 1em;
+    max-width: max-content;
+
+    @include text-font(25px, 400, normal);
+    color: $font-green;
+    background-color: inherit;
+    text-align: center;
+    text-decoration: none;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid $background-green;
+    border-radius: 40px;
+
+    cursor: pointer;
   }
 }
