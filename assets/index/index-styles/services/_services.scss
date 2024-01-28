@@ -41,12 +41,8 @@
     @include heading-font(40px, 400, normal);
     color: $font-beige;
 
-    @include sm {
-      @include heading-font(30px, 400, normal);
-    }
-
     @include xs {
-      font-size: 20px;
+      @include heading-font(30px, 400, normal);
     }
   }
 
@@ -54,6 +50,7 @@
     @include heading-font(22px, 400, normal);
     color: $font-beige;
     text-align: center;
+    padding-top: 10px;
 
     @include sm {
       @include heading-font(20px, 400, normal);

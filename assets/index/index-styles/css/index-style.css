@@ -753,18 +753,13 @@ a {
   line-height: normal;
   color: #FAF8EC;
 }
-@media screen and (max-width: 1024px) {
+@media (max-width: 768px) {
   .servicesBox__title-main {
     font-size: 30px;
     font-family: "Raleway", "arial", sans-serif;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-  }
-}
-@media (max-width: 768px) {
-  .servicesBox__title-main {
-    font-size: 20px;
   }
 }
 .servicesBox__subtitle {
@@ -775,6 +770,7 @@ a {
   line-height: normal;
   color: #FAF8EC;
   text-align: center;
+  padding-top: 10px;
 }
 @media screen and (max-width: 1024px) {
   .servicesBox__subtitle {
@@ -1042,7 +1038,6 @@ a {
 .free-resources {
   background-color: #8C9775;
   padding-bottom: 54px;
-  padding-top: 40px;
 }
 .free-resources__wrap {
   max-width: 1024px;
