@@ -58,12 +58,12 @@
     color: $font-green;
     padding: 0 55px;
 
-    @media screen and (max-width: 1227px) {
+    @include sm {
       @include text-font (20px, 400, normal);
-
+      padding: 0 30px;
     }
 
-    @media screen and (max-width: 1087px) {
+    @include xs {
       @include text-font (16px, 400, normal);
     }
   }
@@ -83,6 +83,17 @@
       background-image: url('/assets/index/index-images/skills-images/star.svg');
       background-size: contain;
 
+      @include sm {
+        width: 15px;
+        height: 15px;
+        left: -1.2em;
+      }
+
+      @include xs {
+        width: 12px;
+        height: 12px;
+        left: -1em;
+      }
     }
   }
 
@@ -104,7 +115,7 @@
     @include xs {
       margin: 0 auto;
       display: inline-flex;
-      @include text-font(12px, 500, 140%);
+      @include text-font(13px, 500, 140%);
       margin-bottom: 30px;
     }
   }
