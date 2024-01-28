@@ -688,6 +688,61 @@ a {
   }
 }
 
+.achievements {
+  background-color: #FAF8EC;
+  height: auto;
+}
+.achievements__wrap {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+@media screen and (max-width: 1024px) {
+  .achievements__wrap {
+    max-width: 800px;
+  }
+}
+.achievements__text {
+  font-size: 15px;
+  font-family: "M PLUS 1p", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #8C9775;
+  margin-top: 10px;
+}
+.achievements__list {
+  list-style: none;
+  font-size: 15px;
+  font-family: "M PLUS 1p", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #8C9775;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 20px;
+}
+@media screen and (max-width: 850px) {
+  .achievements__list {
+    font-size: 18px;
+    font-family: "M PLUS 1p", "arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    grid-template-columns: 1fr;
+  }
+}
+.achievements__item {
+  padding: 20px;
+  text-align: center;
+}
+.achievements__item svg {
+  width: 100%;
+  padding: 10px;
+}
+
 .problems {
   background-color: #FAF8EC;
 }
