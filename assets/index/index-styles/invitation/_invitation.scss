@@ -1,11 +1,11 @@
 .invitation {
   background-color: $background-beige;
-  height: 200px;
+  height: auto;
 
   &__wrap {
     max-width: 1024px;
     margin: 0 auto;
-    padding-top: 30px;
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -34,30 +34,28 @@
     display: flex;
     gap: 200px;
 
-    a {
-      width: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      img {
-        width: 100%;
-        height: 100%;
-        border-radius: 35px;
-      }
-    }
-
     @include xs {
       gap: 20px;
     }
   }
 
   &__link {
+    max-width: 100px;
     img {
-      max-height: 100px;
+      width: 100%;
+      height: 100%;
+      border-radius: 35px;
+      box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.25);
 
       @include xs {
         max-height: 50px;
       }
+    }
+  }
+  &__link:nth-child(2) {
+    max-width: 120px;
+    img {
+      border-radius: 15px;
     }
   }
 }
