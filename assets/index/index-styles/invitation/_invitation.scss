@@ -25,8 +25,7 @@
     color: $font-green;
 
     @include xs {
-      font-size: 35px;
-      text-align: center;
+      display: none;
     }
   }
 

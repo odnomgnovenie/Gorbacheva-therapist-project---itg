@@ -3,19 +3,19 @@
   padding-bottom: 54px;
   padding-top: 40px;
 
-  @media screen and (max-width: 1024) {
+  @include sm {
   }
 
   &__wrap {
     max-width: 1024px;
     margin: 0 auto;
 
-    @media screen and (max-width: 1024px) {
+    @include sm {
       max-width: 768px;
     }
 
     @include xs {
-      max-width: 500px;
+      max-width: auto;
     }
   }
 }
@@ -44,7 +44,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 170px;
-    max-width: 330px;
+    max-width: 310px;
     border: 1px solid $font-beige;
     background-color: $background-beige;
     border-radius: 1em;
