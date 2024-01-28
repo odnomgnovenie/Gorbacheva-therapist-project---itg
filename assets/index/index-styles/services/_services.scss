@@ -6,10 +6,12 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    padding-top: 30px;
     gap: 30px;
 
     @include sm {
       max-width: 800px;
+      padding-top: 20px;
     }
 
     .servicesBox:last-child {
@@ -18,9 +20,11 @@
       flex-wrap: wrap;
       gap: 20px;
       margin: 0 auto;
-      margin-bottom: 74px;
+      margin-bottom: 50px;
+
       @include sm {
-        gap: 20px;
+        gap: 10px;
+        margin-bottom: 20px;
       }
     }
   }
@@ -34,27 +38,35 @@
 
 .servicesBox {
   &__title-main {
-    @include heading-font(50px, 400, normal);
+    @include heading-font(40px, 400, normal);
     color: $font-beige;
 
+    @include sm {
+      @include heading-font(30px, 400, normal);
+    }
+
     @include xs {
-      font-size: 40px;
+      font-size: 20px;
     }
   }
 
   &__subtitle {
-    @include heading-font(30px, 400, normal);
+    @include heading-font(22px, 400, normal);
     color: $font-beige;
     text-align: center;
 
+    @include sm {
+      @include heading-font(20px, 400, normal);
+    }
+
     @include xs {
-      font-size: 25px;
+      @include heading-font(18px, 400, normal);
     }
   }
 
   &__container {
     max-width: 300px;
-    height: 500px;
+    height: 450px;
     background-color: $background-beige;
     border-radius: 15px;
     @include flex-between;
