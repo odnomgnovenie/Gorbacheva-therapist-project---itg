@@ -784,12 +784,12 @@ a {
 
 .invitation {
   background-color: #FAF8EC;
-  height: 200px;
+  height: auto;
 }
 .invitation__wrap {
   max-width: 1024px;
   margin: 0 auto;
-  padding-top: 30px;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -850,123 +850,109 @@ a {
   border-radius: 15px;
 }
 
-/*
-    Auther: Abdelrhman Said
-*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.carousel {
+  background-color: #8C9775;
+  height: 850px;
 }
-
-*:focus,
-*:active {
-  outline: none !important;
-  -webkit-tap-highlight-color: transparent;
+@media (max-width: 768px) {
+  .carousel {
+    height: 950px;
+  }
 }
-
-.medya {
-  display: grid;
+.carousel__wrap {
+  max-width: 1024px;
+  margin: 0px auto;
+  padding-top: 54px;
   height: 100%;
-  width: 100%;
-  place-items: center;
-  background-color: #FAF8EC;
-}
-
-.wrapper {
-  display: inline-flex;
-  list-style: none;
-}
-
-.wrapper .icon {
-  position: relative;
-  background: #ffffff;
-  border-radius: 50%;
-  padding: 15px;
-  margin: 10px;
-  width: 50px;
-  height: 50px;
-  font-size: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .carousel__wrap {
+    max-width: 500px;
+  }
+}
+
+.carouselBox:last-child {
+  height: 660px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+@media (max-width: 768px) {
+  .carouselBox:last-child {
+    height: 850px;
+  }
+}
+
+.carouselBox__title {
+  font-size: 50px;
+  font-family: "Raleway", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #FAF8EC;
+}
+@media (max-width: 768px) {
+  .carouselBox__title {
+    font-size: 35px;
+    text-align: center;
+  }
+}
+.carouselBox__card {
+  height: 570px;
+  max-width: 700px;
+  background-color: #FAF8EC;
+  box-shadow: -8px 8px 56px 19px rgba(0, 0, 0, 0.2509803922);
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .carouselBox__card {
+    height: 730px;
+  }
+}
+.carouselBox__text {
+  font-size: 18px;
+  font-family: "M PLUS 1p", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #8C9775;
+  text-align: justify;
+  padding: 20px 40px;
+}
+@media (max-width: 768px) {
+  .carouselBox__text {
+    font-size: 16px;
+    padding: 15px 30px;
+  }
+}
+.carouselBox__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.carouselBox__button-prev, .carouselBox__button-next {
+  font-size: 18px;
+  font-family: "M PLUS 1p", "arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #FAF8EC;
+  background-color: inherit;
+  padding: 10px 20px;
+  max-width: 200px;
+  width: 100%;
+  min-height: 43px;
+  border-radius: 40px;
+  border: 2px;
+  border-style: solid;
+  border-color: #FAF8EC;
   cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.wrapper .tooltip {
-  position: absolute;
-  top: 0;
-  font-size: 14px;
-  background: #ffffff;
-  color: #ffffff;
-  padding: 5px 8px;
-  border-radius: 5px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.wrapper .tooltip::before {
-  position: absolute;
-  content: "";
-  height: 8px;
-  width: 8px;
-  background: #ffffff;
-  bottom: -3px;
-  left: 50%;
-  transform: translate(-50%) rotate(45deg);
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.wrapper .icon:hover .tooltip {
-  top: -45px;
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
-.wrapper .icon:hover span,
-.wrapper .icon:hover .tooltip {
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
-}
-
-.wrapper .facebook:hover,
-.wrapper .facebook:hover .tooltip,
-.wrapper .facebook:hover .tooltip::before {
-  background: #8C9775;
-  color: #ffffff;
-}
-
-.wrapper .twitter:hover,
-.wrapper .twitter:hover .tooltip,
-.wrapper .twitter:hover .tooltip::before {
-  background: #8C9775;
-  color: #ffffff;
-}
-
-.wrapper .instagram:hover,
-.wrapper .instagram:hover .tooltip,
-.wrapper .instagram:hover .tooltip::before {
-  background: #8C9775;
-  color: #ffffff;
-}
-
-.wrapper .github:hover,
-.wrapper .github:hover .tooltip,
-.wrapper .github:hover .tooltip::before {
-  background: #333333;
-  color: #ffffff;
-}
-
-.wrapper .youtube:hover,
-.wrapper .youtube:hover .tooltip,
-.wrapper .youtube:hover .tooltip::before {
-  background: #cd201f;
-  color: #ffffff;
 }
 
 .burger__wrapper_xs {
