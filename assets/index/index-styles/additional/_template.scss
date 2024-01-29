@@ -42,6 +42,20 @@ a {
   border-radius: 40px;
 }
 
+//миксин для общих размеров
+@mixin wrap-width {
+  max-width: 1024px;
+  margin: auto;
+
+  @include sm {
+    max-width: 800px;
+  }
+
+  @include xs {
+    max-width: 800px;
+  }
+}
+
 //миксин свойств фона
 @mixin background() {
   background-repeat: no-repeat;

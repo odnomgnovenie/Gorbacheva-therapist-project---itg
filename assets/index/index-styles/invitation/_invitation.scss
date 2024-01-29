@@ -3,31 +3,14 @@
   height: auto;
 
   &__wrap {
-    max-width: 1024px;
-    margin: 0 auto;
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-    @include xs {
-      max-width: 500px;
-    }
+    @include wrap-width;
+    padding: 20px 0;
   }
 }
 
 .invitationBox {
   @include flex-center;
   flex-direction: column;
-
-  &__title {
-    @include heading-font(50px, 500, normal);
-    color: $font-green;
-
-    @include xs {
-      display: none;
-    }
-  }
 
   &__icons {
     display: flex;
