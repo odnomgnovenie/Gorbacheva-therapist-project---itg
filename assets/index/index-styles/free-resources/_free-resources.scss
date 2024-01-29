@@ -39,12 +39,10 @@
 
   &__container {
     display: flex;
-    flex: 1;
-    flex-shrink: 1;
     flex-direction: column;
     justify-content: space-between;
     height: 170px;
-    max-width: 310px;
+    width: 300px;
     border: 1px solid $font-beige;
     background-color: $background-beige;
     border-radius: 1em;
@@ -57,19 +55,20 @@
     text-align: center;
   }
 
-  &__wrapper {
-    text-decoration: none;
+  &__btn {
     @include text-font(16px, 400, normal);
-    color: $font-green;
-    background-color: $background-beige;
-    display: grid;
-    place-items: center;
-    padding: 1em 4em;
-    border: 2px solid $background-green;
+    text-decoration: none;
+
+    max-width: 209px;
+    min-height: 43px;
+    width: 100%;
+
+    background-color: inherit;
+    border: 2px solid $font-green;
     border-radius: 40px;
-    max-width: max-content;
-    margin: 0 auto;
-    box-shadow: 8px 8px 8px 0px rgba(255, 255, 255, 0.767);
+    text-align: center;
+    align-self: center;
+    cursor: pointer;
 
     @media screen and (max-width: 375px) {
       padding: 1em 2em;

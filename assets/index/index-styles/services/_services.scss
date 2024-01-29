@@ -2,15 +2,14 @@
   background-color: $background-green;
 
   &__wrap {
-    max-width: 1024px;
-    margin: 0 auto;
+    @include wrap-width;
+
     display: flex;
     flex-direction: column;
     padding-top: 30px;
     gap: 30px;
 
     @include sm {
-      max-width: 800px;
       padding-top: 20px;
     }
 
