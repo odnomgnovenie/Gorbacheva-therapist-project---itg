@@ -12,7 +12,7 @@
     justify-content: center;
     gap: 50px;
 
-    @media screen and (max-width: 1024px) {
+    @include sm {
       max-width: 800px;
     }
 
@@ -41,12 +41,11 @@
 .homeBox {
   &__title {
     @include heading-font(50px, 500, normal);
-    /*     font-family: "M PLUS 1p"; */
     color: $font-green;
     text-align: center;
     margin-bottom: 0;
-    // text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
-    // -webkit-text-stroke-color: $font-beige;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+    -webkit-text-stroke-color: $font-beige;
 
     @include sm {
       font-size: 45px;
@@ -120,13 +119,17 @@
     @include xs {
       height: 400px;
     }
+
+    @media (max-width: 280px) {
+      height: 450px;
+    }
   }
 
   &__item {
     list-style-type: none;
     @include text-font(22px, 500, normal);
     color: $font-green;
-    padding-left: 20px;
+    padding: 0 15px;
 
     @include sm {
       @include text-font(20px, 500, normal);
