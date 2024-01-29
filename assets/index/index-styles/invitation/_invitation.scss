@@ -4,20 +4,26 @@
 
   &__wrap {
     @include wrap-width;
-    padding: 20px 0;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 }
 
 .invitationBox {
   @include flex-center;
-  flex-direction: column;
+  gap: 200px;
 
-  &__icons {
-    display: flex;
-    gap: 200px;
+  @include xs {
+    gap: 20px;
+  }
 
-    @include xs {
-      gap: 20px;
+  &__divider {
+    width: 70%;
+    height: 50px;
+    img {
+      height: 100%;
     }
   }
 

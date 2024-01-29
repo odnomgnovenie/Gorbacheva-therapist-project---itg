@@ -929,7 +929,10 @@ a {
 .invitation__wrap {
   max-width: 1024px;
   margin: auto;
-  padding: 20px 0;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 @media screen and (max-width: 1024px) {
   .invitation__wrap {
@@ -946,16 +949,19 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-}
-.invitationBox__icons {
-  display: flex;
   gap: 200px;
 }
 @media (max-width: 768px) {
-  .invitationBox__icons {
+  .invitationBox {
     gap: 20px;
   }
+}
+.invitationBox__divider {
+  width: 70%;
+  height: 50px;
+}
+.invitationBox__divider img {
+  height: 100%;
 }
 .invitationBox__link {
   max-width: 100px;
