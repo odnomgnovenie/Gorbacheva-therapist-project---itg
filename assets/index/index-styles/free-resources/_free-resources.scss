@@ -1,82 +1,115 @@
 .free-resources {
   background-color: $background-green;
-  padding-bottom: 54px;
-  padding-top: 40px;
-
-  @include sm {
-  }
 
   &__wrap {
-    max-width: 1024px;
-    margin: 0 auto;
+    @include wrap-width;
+    padding: 30px 0 40px;
+  }
 
-    @include sm {
-      max-width: 768px;
-    }
+  @include sm {
+    padding: 10px 0 10px;
+  }
 
-    @include xs {
-      max-width: auto;
-    }
+  @include xs {
+    padding: 10px 0 10px;
+  }
+
+  @include xxs {
+    padding: 0;
   }
 }
 
 .free-resourcesBox {
-  display: flex;
+  @include flex-center;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
+  margin: 0 auto;
+
+  @include sm {
+    gap: 10px;
+  }
 
   &__title {
     @include heading-font(40px, 400, normal);
     color: $font-beige;
-    padding-bottom: 30px;
-    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: $font-beige;
+
+    @include sm {
+      margin-bottom: 30px;
+      @include heading-font(30px, 400, normal);
+    }
 
     @include xs {
-      @include heading-font(20px, 400, normal);
+      margin-bottom: 30px;
+      @include heading-font(30px, 400, normal);
+      text-align: center;
     }
   }
 
   &__container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
+    align-items: center;
+
     height: 170px;
-    width: 300px;
-    border: 1px solid $font-beige;
+    width: 320px;
+
+    @include border-green;
     background-color: $background-beige;
     border-radius: 1em;
     padding: 20px;
-  }
 
-  &__small-title {
-    @include text-font(12px, 400, normal);
-    color: $font-green;
-    text-align: center;
-  }
+    @include sm {
+      height: 160px;
+      width: 330px;
+    }
 
-  &__btn {
-    @include text-font(16px, 400, normal);
-    text-decoration: none;
-
-    max-width: 209px;
-    min-height: 43px;
-    width: 100%;
-
-    background-color: inherit;
-    border: 2px solid $font-green;
-    border-radius: 40px;
-    text-align: center;
-    align-self: center;
-    cursor: pointer;
-
-    @media screen and (max-width: 375px) {
-      padding: 1em 2em;
+    @include xs {
+      height: 155px;
+      width: 300px;
     }
   }
 
-  &__link {
-    @include text-font(18px, 400, normal);
+  &__small-title {
+    @include text-font(16px, 500, normal);
     color: $font-green;
+    text-align: center;
+    margin-bottom: 10px;
+
+    @include xs {
+      font-size: 14px;
+    }
+  }
+
+  &__btn {
+    text-decoration: none;
+    @include text-font(16px, 500, normal);
+    color: $font-green;
+    background-color: $background-beige;
+    display: grid;
+    place-items: center;
+    padding: 0.5em 3em;
+    @include border-green;
+    max-width: max-content;
+    cursor: pointer;
+
+    @include xs {
+      margin: 0 auto;
+      display: inline-flex;
+      @include text-font(14px, 500, 140%);
+    }
+
+    @include xxs {
+      @include text-font(13px, 500, 140%);
+      margin: 5px 0;
+    }
+
+    a {
+      color: $font-green;
+    }
   }
 }

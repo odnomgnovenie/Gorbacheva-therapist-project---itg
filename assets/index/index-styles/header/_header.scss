@@ -1,7 +1,8 @@
 .header {
-  background: $font-green;
   width: 100%;
   height: 90px;
+
+  background: $font-green;
 
   @include xs {
     height: 70px;
@@ -17,8 +18,9 @@
 }
 
 .navigation {
-  @include flex-between;
   padding-top: 20px;
+
+  @include flex-between;
 
   @include xs {
     display: none;
@@ -34,6 +36,11 @@
         height: 40px;
         border-radius: 25px;
         box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.25);
+
+        @include sm {
+          width: 30px;
+          height: 30px;
+        }
       }
     }
   }
@@ -46,8 +53,12 @@
   &__link {
     margin-right: 30px;
 
-    color: $font-beige;
     @include text-font(20px, 500, normal);
+    color: $font-beige;
+
+    @include sm {
+      @include text-font(18px, 500, normal);
+    }
   }
 
   &__btn {
@@ -63,6 +74,10 @@
 
     @include border-green;
     box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.25);
+
+    @include sm {
+      @include text-font(18px, 500, normal);
+    }
   }
 }
 

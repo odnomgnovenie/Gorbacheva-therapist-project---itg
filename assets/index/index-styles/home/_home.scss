@@ -18,11 +18,11 @@
   display: flex;
   justify-content: center;
   gap: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   height: 100%;
 
   @include sm {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   @include xs {
@@ -45,21 +45,25 @@
     }
 
     @include xs {
-      padding-top: 25px;
-      font-size: 30px;
+      padding-top: 15px;
+      font-size: 40px;
     }
   }
 
   &__img {
-    flex-basis: 30%;
+    flex-basis: 29.5%;
 
     @include sm {
-      width: 40%;
+      flex-basis: 33%;
     }
 
     @include xs {
       margin-right: 0;
-      width: 70%;
+      width: 40%;
+    }
+
+    @include xxs {
+      width: 60%;
     }
   }
 
@@ -80,7 +84,8 @@
 
     @include sm {
       flex-basis: 60%;
-      gap: 20px;
+      width: 90%;
+      gap: 10px;
     }
 
     @include xs {
@@ -89,7 +94,7 @@
   }
 
   &__title_name {
-    margin-top: 0;
+    margin-bottom: 15px;
 
     @include sm {
       font-size: 35px;
@@ -121,10 +126,6 @@
     @include xs {
       height: auto;
     }
-
-    // @media (max-width: 280px) {
-    //   height: 450px;
-    // }
   }
 
   &__item {
@@ -142,7 +143,7 @@
   }
 
   &__item:first-child {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 
     @include sm {
       margin-bottom: 10px;

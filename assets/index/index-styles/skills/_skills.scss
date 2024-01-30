@@ -4,7 +4,6 @@
   &__wrap {
     @include wrap-width;
     width: 100%;
-
     @include border-green;
     border-radius: 15px;
     @include background();
@@ -32,20 +31,28 @@
   flex-direction: column;
   gap: 30px;
 
+  @include sm {
+    gap: 25px;
+  }
+
+  @include xs {
+    gap: 20px;
+  }
+
   &__title {
     color: $font-green;
     text-align: center;
-    @include heading-font(30px, 700, normal);
+    @include heading-font(30px, 500, normal);
     text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
     -webkit-text-stroke-width: 1;
     -webkit-text-stroke-color: $font-beige;
 
     @include sm {
-      @include heading-font(25px, 400, normal);
+      @include heading-font(25px, 500, normal);
     }
 
     @include xs {
-      @include heading-font(20px, 400, normal);
+      @include heading-font(20px, 500, normal);
     }
   }
 
@@ -67,6 +74,15 @@
 
   &__text {
     position: relative;
+    gap: 15px;
+
+    @include sm {
+      gap: 10px;
+    }
+
+    @include xs {
+      gap: 8px;
+    }
 
     &:before {
       content: "";
@@ -87,8 +103,8 @@
       }
 
       @include xs {
-        width: 12px;
-        height: 12px;
+        width: 10px;
+        height: 10px;
         left: -1em;
       }
     }
@@ -102,7 +118,7 @@
     background-color: #f7f7ed;
     display: grid;
     place-items: center;
-    padding: 1em 4em;
+    padding: 0.5em 2em;
     @include border-green;
     max-width: max-content;
     box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.25);

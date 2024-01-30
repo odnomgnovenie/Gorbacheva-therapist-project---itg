@@ -4,23 +4,32 @@
   &__wrap {
     @include wrap-width;
     height: auto;
-    padding: 54px 0;
+    padding-top: 50px;
 
-    @include sm {
-      padding: 30px 0;
+    @include xs {
+      padding-top: 30px;
     }
   }
 
   &__title {
-    @include heading-font(25px, 400, normal);
+    @include heading-font(25px, 500, normal);
     text-align: center;
     color: $font-green;
-    font-weight: 700;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: $font-beige;
+
+    @include sm {
+      @include heading-font(25px, 500, normal);
+    }
+
+    @include xs {
+      @include heading-font(20px, 500, normal);
+    }
   }
 
   &__list {
     list-style: none;
-    width: 100%;
     margin: 0 auto;
     @include text-font(18px, 400, normal);
     color: $font-green;
@@ -30,17 +39,28 @@
     grid-auto-rows: 1fr;
     gap: 30px;
 
-    @media screen and (max-width: 850px) {
-      width: 90%;
+    @include sm {
+      @include text-font(17px, 400, normal);
       margin-top: 30px;
+      gap: 25px;
+    }
+
+    @include xs {
+      width: 90%;
+      @include text-font(16px, 400, normal);
+      gap: 20px;
+    }
+
+    @include xxs {
       grid-template-columns: 1fr;
+      gap: 10px;
     }
   }
 
   &__item {
-    border: 2px solid #8c9775;
+    @include border-green;
     border-radius: 1em;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 
     svg {
