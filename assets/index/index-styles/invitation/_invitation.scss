@@ -1,60 +1,53 @@
 .invitation {
   background-color: $background-beige;
-  height: auto;
 
   &__wrap {
-    max-width: 1024px;
-    margin: 0 auto;
-    padding-top: 20px;
+    @include wrap-width;
+    height: auto;
+    padding: 20px 0;
     display: flex;
     flex-direction: column;
     gap: 20px;
-
-    @include xs {
-      max-width: 500px;
-    }
   }
 }
 
 .invitationBox {
   @include flex-center;
-  flex-direction: column;
+  gap: 220px;
 
-  &__title {
-    @include heading-font(50px, 500, normal);
-    color: $font-green;
-
-    @include xs {
-      display: none;
-    }
+  @include sm {
+    gap: 170px;
   }
 
-  &__icons {
-    display: flex;
-    gap: 200px;
+  @include xs {
+    gap: 140px;
+  }
 
-    @include xs {
-      gap: 20px;
-    }
+  @include xxs {
+    gap: 50px;
+  }
+
+  &__divider {
+    width: 70%;
+    height: 50px;
   }
 
   &__link {
     max-width: 100px;
+
+    @include xs {
+      width: 45px;
+    }
+
+    @include xxs {
+      max-width: 40px;
+    }
+
     img {
       width: 100%;
-      height: 100%;
+      max-height: 100%;
       border-radius: 35px;
       box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.25);
-
-      @include xs {
-        max-height: 50px;
-      }
-    }
-  }
-  &__link:nth-child(2) {
-    max-width: 120px;
-    img {
-      border-radius: 15px;
     }
   }
 }

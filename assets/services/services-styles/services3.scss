@@ -1,0 +1,362 @@
+@import './additional/fonts';
+@import './additional/vars';
+@import './additional/template';
+@import './header/header';
+@import './footer/footer';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FAF8EC;
+}
+
+.main {
+    padding: 0 50px;
+
+    @media screen and (max-width: 500px) {
+        padding: 0 10px;
+    }
+}
+
+.services-page {
+    max-width: 1920px;
+    margin: 0 auto;
+
+    &__title {
+        text-wrap: balance;
+        color: $font-green;
+        @include heading-font (50px, 400, normal);
+        margin-top: 54px;
+
+        @media screen and (max-width: 928px) {
+            @include heading-font (30px, 400, normal);
+        }
+
+        @media screen and (max-width: 500px) {
+            @include heading-font (25px, 400, normal);
+            text-align: center;
+        }
+    }
+}
+
+.page-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    flex-wrap: wrap;
+    margin-top: 54px;
+}
+
+.image-wrapper {
+    flex: 1 1 50%;
+    max-width: 400px;
+
+    &__img {
+        filter: drop-shadow(0 0 5px #8C9775);
+        border-radius: 1em;
+        width: 100%;
+
+    }
+
+    @media screen and (max-width:952px) {
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
+.service-description {
+    display: flex;
+    flex: 1 1 40%;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+
+    &__title {
+        color: $font-green;
+        @include heading-font (25px, 700, normal);
+    }
+
+    &__subtitle {
+        color: $font-green;
+        @include heading-font (25px, 400, normal);
+        font-weight: 700;
+    }
+
+    &__list {
+        list-style: none;
+        @include text-font (25px, 400, normal);
+        color: $font-green;
+        display: flex;
+        flex-direction: column;
+        padding-left: 50px;
+
+        @media screen and (max-width: 1227px) {
+            @include text-font (20px, 400, normal);
+        }
+
+        @media screen and (max-width: 1087px) {
+            @include text-font (16px, 400, normal);
+            padding-left: 30px;
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: -2em;
+            top: 8px;
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-image: url('../../services-images/star.svg');
+            background-size: contain;
+        }
+    }
+
+    &__text {
+        @include text-font (25px, 400, normal);
+        color: $font-green;
+        margin-top: 10px;
+
+        @media screen and (max-width: 1227px) {
+            @include text-font (20px, 400, normal);
+        }
+
+        @media screen and (max-width: 1087px) {
+            @include text-font (16px, 400, normal);
+        }
+    }
+}
+
+.example {
+    margin-top: 54px;
+
+    &__title {
+        @include heading-font (25px, 400, normal);
+        color: $font-green;
+        font-weight: 700;
+    }
+
+    &__text {
+        @include text-font (15px, 400, normal);
+        color: $font-green;
+        margin-top: 50px;
+    }
+
+    &__list {
+        list-style: none;
+        @include text-font (15px, 400, normal);
+        color: $font-green;
+        margin-top: 54px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 1fr;
+        gap: 30px;
+
+        @media screen and (max-width: 850px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        border: 2px solid #8C9775;
+        border-radius: 1em;
+        padding: 20px;
+        text-align: justify;
+
+        svg {
+            width: 100%;
+        }
+    }
+}
+
+.result {
+    margin-top: 54px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #8C9775;
+    padding: 20px;
+    border-radius: 1em;
+    flex-wrap: wrap;
+
+    &__container {
+        max-width: 700px;
+    }
+
+    &__title {
+        @include heading-font (50px, 400, normal);
+        color: $font-green;
+        padding-bottom: 20px;
+
+        @media screen and (max-width: 928px) {
+            @include heading-font (30px, 400, normal);
+        }
+
+        @media screen and (max-width: 500px) {
+            @include heading-font (25px, 400, normal);
+            text-align: center;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        @include text-font (25px, 400, normal);
+        color: $font-green;
+        padding-left: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @media screen and (max-width: 928px) {
+            @include text-font (20px, 400, normal);
+        }
+
+        @media screen and (max-width: 500px) {
+            @include text-font (16px, 400, normal);
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: -2em;
+            top: 8px;
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-image: url('../../services-images/star.svg');
+            background-size: contain;
+        }
+    }
+
+    .result-image {
+        @media screen and (max-width:928px) {
+            margin: 0 auto;
+        }
+
+        &__img {
+            max-width: 400px;
+            object-fit: contain;
+
+            @media screen and (max-width:558px) {
+                height: auto;
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    }
+}
+
+.duration {
+    margin-top: 54px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    &__container {
+        width: 500px;
+        border: 1px solid #8C9775;
+        background-color: #8C9775;
+        border-radius: 1em;
+        padding: 20px;
+        min-height: 243px;
+    }
+
+    &__title {
+        @include heading-font (25px, 400, normal);
+        color: $font-beige;
+        padding-bottom: 20px;
+        text-align: center;
+
+        @media screen and (max-width: 347px) {
+            @include heading-font (20px, 400, normal);
+        }
+    }
+
+    &__text {
+        @include text-font (16px, 400, normal);
+        color: $font-beige;
+        margin-top: 30px;
+        text-align: justify;
+
+        @media screen and (max-width: 347px) {
+            @include text-font (14px, 400, normal);
+        }
+    }
+}
+
+.price-connect {
+    width: 500px;
+    border: 1px solid #8C9775;
+    background-color: #8C9775;
+    border-radius: 1em;
+    padding: 20px;
+
+    &__title {
+        @include heading-font (25px, 400, normal);
+        color: $font-beige;
+        padding-bottom: 20px;
+        text-align: center;
+
+        @media screen and (max-width: 347px) {
+            @include heading-font (20px, 400, normal);
+        }
+    }
+
+    &__title-numbers {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    &__subtitle {
+        @include heading-font (15px, 400, normal);
+        color: $font-beige;
+        padding: 20px 0 20px;
+        text-align: center;
+    }
+
+    &__tlg {
+        @include heading-font (15px, 400, normal);
+        color: $font-beige;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    &__text {
+        @include text-font (12px, 400, normal);
+        color: $font-beige;
+        font-style: italic;
+        text-align: center;
+    }
+
+    &__link {
+        text-decoration: none;
+        @include text-font (16px, 400, normal);
+        color: $font-beige;
+        background-color: #8C9775;
+        display: grid;
+        place-items: center;
+        padding: 1em 4em;
+        border: 2px solid #FAF8EC;
+        border-radius: 40px;
+        max-width: max-content;
+        margin: 0 auto;
+        box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.25);
+
+        @media screen and (max-width: 375px) {
+            padding: 1em 2em;
+        }
+    }
+}

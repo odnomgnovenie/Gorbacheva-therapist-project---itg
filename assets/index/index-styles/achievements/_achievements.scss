@@ -1,45 +1,59 @@
 .achievements {
-    background-color: $background-beige;
+  background-color: $background-beige;
+
+  &__wrap {
+    @include wrap-width;
     height: auto;
+    width: 90%;
+    padding-top: 50px;
 
-    &__wrap {
-        max-width: 1024px;
-        margin: 0 auto;
-        padding-top: 50px;
+    @include xs {
+      padding-top: 30px;
+    }
+  }
 
-        @include sm {
-            max-width: 800px;
-        }
+  &__list {
+    list-style: none;
+    @include text-font (18px, 400, normal);
+    color: $font-green;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    text-align: center;
+    justify-content: center;
+
+    @include sm {
+      @include text-font (17px, 400, normal);
     }
 
-    &__text {
-        @include text-font (15px, 400, normal);
-        color: $font-green;
-        margin-top: 10px;
+    @include xs {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      display: flex;
+      @include text-font (16px, 400, normal);
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    gap: 10px;
+
+    svg {
+      width: 100%;
+    }
+  }
+
+  &__bigItem {
+    @include text-font (20px, 500, normal);
+
+    @include sm {
+      @include text-font (18px, 500, normal);
     }
 
-    &__list {
-        list-style: none;
-        @include text-font (15px, 400, normal);
-        color: $font-green;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-auto-rows: 1fr;
-        gap: 20px;
-
-        @media screen and (max-width: 850px) {
-            @include text-font (18px, 400, normal);
-            grid-template-columns: 1fr;
-        }
+    @include xs {
+      @include text-font (16px, 500, normal);
     }
-
-    &__item {
-        padding: 20px;
-        text-align: center;
-
-        svg {
-            width: 100%;
-            padding: 10px;
-        }
-    }
+  }
 }

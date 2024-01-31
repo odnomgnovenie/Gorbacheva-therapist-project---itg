@@ -1,52 +1,70 @@
 .problems {
-    background-color: $background-beige;
+  background-color: $background-beige;
 
-    &__wrap {
-        max-width: 1024px;
-        height: auto;
-        padding: 54px 0;
-        margin: 0 auto;
+  &__wrap {
+    @include wrap-width;
+    height: auto;
+    padding-top: 50px;
 
-        @include sm {
-            max-width: 800px;
-            padding: 30px 0;
-        }
+    @include xs {
+      padding-top: 30px;
+    }
+  }
+
+  &__title {
+    @include heading-font(25px, 500, normal);
+    text-align: center;
+    color: $font-green;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: $font-beige;
+
+    @include sm {
+      @include heading-font(25px, 500, normal);
     }
 
-    &__title {
-        @include heading-font (25px, 400, normal);
-        text-align: center;
-        color: $font-green;
-        font-weight: 700;
+    @include xs {
+      @include heading-font(20px, 500, normal);
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0 auto;
+    @include text-font(18px, 400, normal);
+    color: $font-green;
+    margin-top: 54px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 30px;
+
+    @include sm {
+      @include text-font(17px, 400, normal);
+      margin-top: 30px;
+      gap: 25px;
     }
 
-    &__list {
-        list-style: none;
-        width: 100%;
-        margin: 0 auto;
-        @include text-font (18px, 400, normal);
-        color: $font-green;
-        margin-top: 54px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-auto-rows: 1fr;
-        gap: 30px;
-
-        @media screen and (max-width: 850px) {
-            width: 90%;
-            margin-top: 30px;
-            grid-template-columns: 1fr;
-        }
+    @include xs {
+      width: 90%;
+      @include text-font(16px, 400, normal);
+      gap: 20px;
     }
 
-    &__item {
-        border: 2px solid #8C9775;
-        border-radius: 1em;
-        padding: 20px;
-        text-align: center;
-
-        svg {
-            width: 100%;
-        }
+    @include xxs {
+      grid-template-columns: 1fr;
+      gap: 10px;
     }
+  }
+
+  &__item {
+    @include border-green;
+    border-radius: 1em;
+    padding: 10px;
+    text-align: center;
+
+    svg {
+      width: 100%;
+    }
+  }
 }
