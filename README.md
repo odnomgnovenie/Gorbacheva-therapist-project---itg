@@ -6,3 +6,5 @@
 @odnomgnovenie Даша: skills, achievementss, problems; 
 @mei_fox Юля: services, invitation, reviews;
 @lyu_bhava Люба: services1-6, footer.
+
+https://github.com/users/odnomgnovenie/projects/1
