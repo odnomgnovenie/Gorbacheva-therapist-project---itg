@@ -30,12 +30,12 @@ a {
 
 @mixin border-green {
   border-radius: 23px;
-  border: 3px solid #8c9775;
+  border: 1px solid #8c9775;
 }
 
 @mixin border-beige {
-  border: 2px solid #faf8ec;
-  border-radius: 40px;
+  border: 1px solid #faf8ec;
+  border-radius: 23px;
 }
 
 @mixin wrap-width {

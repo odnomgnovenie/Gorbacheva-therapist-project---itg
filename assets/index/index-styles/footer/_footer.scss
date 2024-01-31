@@ -1,152 +1,138 @@
-.burger__wrapper_xs {
-    display: none;
-}
-
-@include xs {
-    .burger__wrapper_xs {
-        display: block;
-        max-width: 200px;
-        position: relative;
-        top: 10px;
-        left: 20px;
-        z-index: 1;
-        -webkit-user-select: none;
-        user-select: none;
-
-        input {
-            display: block;
-            width: 40px;
-            height: 32px;
-            position: absolute;
-            top: -7px;
-            left: -5px;
-            cursor: pointer;
-            opacity: 0;
-            /* hide this */
-            z-index: 2;
-            /* and place it over the hamburger */
-            -webkit-touch-callout: none;
-        }
-
-        span {
-            display: block;
-            width: 33px;
-            height: 4px;
-            margin-bottom: 5px;
-            position: relative;
-            background: $font-beige;
-            border-radius: 3px;
-            z-index: 1;
-            transform-origin: 4px 0px;
-            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
-                background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
-        }
-
-        span:first-child {
-            transform-origin: 0% 0%;
-        }
-
-        span:nth-last-child(2) {
-            transform-origin: 0% 100%;
-        }
-
-        input:checked~span {
-            opacity: 1;
-            transform: rotate(45deg) translate(-2px, -1px);
-            background: $font-beige;
-        }
-
-        input:checked~span:nth-last-child(3) {
-            opacity: 0;
-            transform: rotate(0deg) scale(0.2, 0.2);
-        }
-
-        input:checked~span:nth-last-child(2) {
-            transform: rotate(-45deg) translate(0, -1px);
-        }
-    }
-}
-
 .footer {
-    background: $font-green;
-    height: 90px;
-    width: 100%;
-    position: relative;
+    background: $background-green;
 
-    @include xs {
-        background: $font-green;
-        height: 70px;
-    }
-
-    &__container {
-        max-width: 1024px;
-        padding-top: 30px;
+    &__wrap {
+        @include wrap-width;
         margin: 0 auto;
+        width: 100%;
+        height: 90px;
 
-        @media (max-width: 1024px) {
-            max-width: 786px;
+        @include sm {
+            height: 70px;
         }
 
         @include xs {
-            padding-top: 10px;
+            width: 90%;
+            height: 70px;
+        }
+
+        @include xxs {
+            height: 60px;
         }
     }
 
-    .footer-icons {
-        &__nav {
-            @include flex-between;
+    .footerNavigation {
+        @include flex-between;
+        padding-top: 20px;
+
+        @include sm {
+            padding-top: 15px;
+        }
+
+        @include xs {
+            padding-top: 20px;
+        }
+
+        @include xxs {
+            padding-top: 10px;
+        }
+
+        &__wrap {
+            display: flex;
+            gap: 50px;
+
+            @include sm {
+                gap: 40px;
+            }
 
             @include xs {
-                display: none;
+                gap: 30px;
+            }
+
+            @include xxs {
+                gap: 15px;
+            }
+
+            a {
+                img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 25px;
+                    box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.25);
+
+                    @include sm {
+                        width: 30px;
+                        height: 30px;
+                        margin-left: 10px;
+                    }
+
+                    @include xs {
+                        width: 25px;
+                        height: 25px;
+                        margin-left: 10px;
+                    }
+
+                    @include xxs {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
             }
         }
 
-        &__wrapper {
+
+        &__inside-links {
             display: flex;
-
+            align-items: center;
         }
 
-        &__img {
-            margin-right: 20px;
-            max-width: 30px;
-            min-height: 30px;
+        &__link {
+            @include text-font(20px, 500, normal);
+            margin-right: 30px;
+            color: $font-beige;
+            text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+            -webkit-text-stroke-width: 1;
+            -webkit-text-stroke-color: $font-beige;
+
+            @include sm {
+                @include text-font(18px, 500, normal);
+                margin-right: 20px;
+            }
+
+            @include xs {
+                @include text-font(16px, 500, normal);
+                margin-right: 10px;
+            }
+
+            @include xxs {
+                @include text-font(14px, 500, normal);
+                margin-right: 5px;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
         }
     }
 
-    &__list {
-        position: absolute;
-        width: 200px;
-        margin: -100px 0 0 -50px;
-        padding: 10px 50px 74px;
-        background-color: $font-green;
-        top: 0;
-        list-style-type: none;
-        transform: translate(-100%, 0);
-        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-    }
-
-    &__link {
+    .footerbox__title {
+        @include flex-center;
+        margin: 0 auto;
+        @include text-font(12px, 400, normal);
         color: $font-beige;
-        transition: color 0.3s ease;
-        padding: 10px 0;
-        @include text-font(22px, 400, normal);
 
-        &:hover {
-            color: #6a6763;
+        @include sm {
+            @include text-font(11px, 400, normal);
         }
-    }
 
-    input:checked~ul {
-        transform: translate(0, 0);
-    }
-}
+        @include xs {
+            @include text-font(10px, 400, normal);
+        }
 
-.inside-links {
-    display: flex;
-    gap: 30px;
-
-    &__link {
-        color: $font-beige;
-        @include text-font(25px, 500, normal);
+        @include xxs {
+            margin-top: 5px;
+            @include text-font(7px, 400, normal);
+        }
     }
 }

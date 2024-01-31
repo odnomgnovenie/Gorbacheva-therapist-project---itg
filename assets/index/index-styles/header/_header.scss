@@ -1,8 +1,7 @@
 .header {
+  background: $font-green;
   width: 100%;
   height: 90px;
-
-  background: $font-green;
 
   @include xs {
     height: 70px;
@@ -18,9 +17,8 @@
 }
 
 .navigation {
-  padding-top: 20px;
-
   @include flex-between;
+  padding-top: 20px;
 
   @include xs {
     display: none;
@@ -52,9 +50,8 @@
 
   &__link {
     margin-right: 30px;
-
-    @include text-font(20px, 500, normal);
     color: $font-beige;
+    @include text-font(20px, 500, normal);
 
     @include sm {
       @include text-font(18px, 500, normal);
@@ -134,18 +131,18 @@
       transform-origin: 0% 100%;
     }
 
-    input:checked ~ span {
+    input:checked~span {
       opacity: 1;
       transform: rotate(45deg) translate(-2px, -1px);
       background: $font-beige;
     }
 
-    input:checked ~ span:nth-last-child(3) {
+    input:checked~span:nth-last-child(3) {
       opacity: 0;
       transform: rotate(0deg) scale(0.2, 0.2);
     }
 
-    input:checked ~ span:nth-last-child(2) {
+    input:checked~span:nth-last-child(2) {
       transform: rotate(-45deg) translate(0, -1px);
     }
 
@@ -181,7 +178,7 @@
       }
     }
 
-    input:checked ~ ul {
+    input:checked~ul {
       transform: none;
     }
   }

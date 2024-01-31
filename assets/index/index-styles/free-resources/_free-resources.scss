@@ -51,13 +51,11 @@
 
   &__container {
     display: flex;
-    flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-
+    flex-direction: column;
     height: 170px;
     width: 320px;
-
     @include border-green;
     background-color: $background-beige;
     border-radius: 1em;
@@ -80,6 +78,10 @@
     text-align: center;
     margin-bottom: 10px;
 
+    @include sm {
+      @include text-font(14px, 500, normal);
+    }
+
     @include xs {
       font-size: 14px;
     }
@@ -97,14 +99,19 @@
     max-width: max-content;
     cursor: pointer;
 
+    @include sm {
+      @include text-font(15px, 500, normal);
+      padding: 0.5em 2.5em;
+    }
+
     @include xs {
       margin: 0 auto;
       display: inline-flex;
-      @include text-font(14px, 500, 140%);
+      @include text-font(14px, 500, normal);
     }
 
     @include xxs {
-      @include text-font(13px, 500, 140%);
+      @include text-font(13px, 500, normal);
       margin: 5px 0;
     }
 

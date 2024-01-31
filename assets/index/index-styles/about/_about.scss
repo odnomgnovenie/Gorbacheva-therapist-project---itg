@@ -23,18 +23,17 @@
   }
 
   &__text-big {
-    margin-left: 30px;
-
     @include heading-font(35px, 500, normal);
     color: $font-green;
-
+    margin-left: 30px;
     text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
     -webkit-text-stroke-width: 1;
     -webkit-text-stroke-color: $font-beige;
 
+
     @include sm {
-      margin-left: 30px;
       font-size: 30px;
+      margin-left: 30px;
     }
 
     @include xs {
@@ -47,13 +46,10 @@
   &__list {
     padding: 0 55px;
     margin-bottom: 30px;
-
     position: relative;
-
     @include text-font(25px, 400, normal);
     color: $font-green;
     list-style: none;
-
     display: flex;
     flex-direction: column;
     gap: 15px;

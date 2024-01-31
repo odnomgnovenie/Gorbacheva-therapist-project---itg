@@ -52,17 +52,17 @@
     padding: 20px 40px;
 
     @include sm {
-      font-size: 17px;
+      font-size: 16px;
       padding: 20px 40px;
     }
 
     @include xs {
-      font-size: 16px;
+      font-size: 14px;
       padding: 15px 30px;
     }
 
     @include xxs {
-      font-size: 14px;
+      font-size: 13px;
       padding: 10px 20px;
     }
   }
@@ -74,21 +74,31 @@
 
   &__button-prev,
   &__button-next {
-    @include text-font(18px, 500, normal);
+    text-decoration: none;
+    @include text-font(18px, 400, normal);
     color: $font-beige;
-    background-color: inherit;
-    padding: 5px 30px;
-    max-width: 200px;
-    width: 100%;
-    min-height: 43px;
-    border-radius: 40px;
-    border: 1px;
-    border-style: solid;
-    border-color: $background-beige;
+    background-color: initial;
+    display: grid;
+    place-items: center;
+    padding: 0.5em 3em;
+    @include border-beige;
+    max-width: max-content;
     cursor: pointer;
 
-    @include xs {
+
+    @include sm {
       font-size: 16px;
+      padding: 0.4em 2.5em;
+    }
+
+    @include xs {
+      font-size: 14px;
+      padding: 0.3em 2em;
+    }
+
+    @include xxs {
+      font-size: 13px;
+      padding: 0.2em 2em;
     }
   }
 }

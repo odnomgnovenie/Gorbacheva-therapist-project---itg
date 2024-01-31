@@ -1,6 +1,89 @@
-@import "../additional/template";
-@import "../additional/fonts";
-@import "../additional/vars";
+.header {
+    background: $font-green;
+    width: 100%;
+
+    &__wrap {
+        margin: 0 auto;
+        width: 90%;
+        height: 90px;
+
+        @include sm {
+            height: 85px;
+        }
+
+        @include xs {
+            width: 90%;
+            height: 70px;
+        }
+
+        @include xxs {
+            height: 60px;
+        }
+    }
+
+}
+
+.navigation {
+    @include flex-between;
+    padding-top: 20px;
+
+    @include xs {
+        display: none;
+    }
+
+    &__sosial-media {
+        display: flex;
+        gap: 20px;
+
+        a {
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 25px;
+                box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.25);
+
+                @include sm {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+
+    &__inside-links {
+        display: flex;
+        align-items: center;
+    }
+
+    &__link {
+        margin-right: 30px;
+        color: $font-beige;
+        @include text-font(20px, 500, normal);
+
+        @include sm {
+            @include text-font(18px, 500, normal);
+        }
+    }
+
+    &__btn {
+        max-width: max-content;
+
+        margin: 0 auto;
+        padding: 0.3em 1em;
+
+        @include text-font(20px, 500, normal);
+        text-decoration: none;
+        color: $font-green;
+        background-color: $background-beige;
+
+        @include border-green;
+        box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.25);
+
+        @include sm {
+            @include text-font(18px, 500, normal);
+        }
+    }
+}
 
 .hamburger_xs {
     display: none;
@@ -9,7 +92,7 @@
 @include xs {
     .hamburger_xs {
         display: block;
-        max-width: 200px;
+        max-width: 220px;
         position: relative;
         top: 10px;
         left: 20px;
@@ -24,11 +107,12 @@
             position: absolute;
             top: -7px;
             left: -5px;
+
             cursor: pointer;
+
             opacity: 0;
-            /* hide this */
             z-index: 2;
-            /* and place it over the hamburger */
+
             -webkit-touch-callout: none;
         }
 
@@ -71,9 +155,9 @@
 
         .menu {
             position: absolute;
-            width: 200px;
+            width: 220px;
             margin: -100px 0 0 -50px;
-            padding: 50px;
+            padding-left: 50px;
             padding-bottom: 10px;
             padding-top: 100px;
 
@@ -103,63 +187,6 @@
 
         input:checked~ul {
             transform: none;
-        }
-    }
-}
-
-.header {
-    background-color: $font-green;
-    height: 90px;
-    width: 100%;
-
-    @include xs {
-        background-color: $font-green;
-        height: 70px;
-    }
-
-    .header__wrap {
-        max-width: 1024px;
-        padding-top: 30px;
-        margin: auto;
-
-        @media (max-width: 1024px) {
-            max-width: 786px;
-        }
-
-        @include xs {
-            padding-top: 10px;
-        }
-
-        .headerBox {
-            .navigation {
-                @include flex-between;
-
-                @include xs {
-                    display: none;
-                }
-
-                .navigation__sosial-media {
-                    display: flex;
-
-                    a {
-                        img {
-                            margin-right: 20px;
-                            max-width: 30px;
-                            min-height: 30px;
-                        }
-                    }
-                }
-
-                .navigation__inside-links {
-                    display: flex;
-                    gap: 30px;
-
-                    a {
-                        color: $font-beige;
-                        @include text-font(25px, 500, normal);
-                    }
-                }
-            }
         }
     }
 }
